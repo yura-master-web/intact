@@ -1,0 +1,37 @@
+
+$base-colors = {
+	'white':       #fff,
+	'black':       #262626,
+	'lightpurple': #e9ecfe,
+	'purple':      #acb8fa,
+	'blue':        #2840ca,
+	'orangered':   #fe5034,
+}
+
+
+$brand-colors = {
+	'accent': map-get($base-colors, 'blue'),
+	'secondary-color': map-get($base-colors, 'orangered'),
+	'text': map-get($base-colors, 'black')
+	'form': map-get($base-colors, 'purple'),
+	'white': map-get($base-colors, 'white'),
+}
+
+$secondary-colors = {
+	'border': map-get($base-colors, 'lightpurple'),
+}
+
+$colors = $brand-colors
+
+for $cl, $cr in $colors
+	.cl-{$cl}
+		color map-get($colors, $cl)
+
+	.bg-{$cl}
+		background-color map-get($colors, $cl)
+
+$colors = merge($colors, $base-colors)
+$colors = merge($colors, $secondary-colors)
+
+colors($color)
+	return map-get($colors, $color)

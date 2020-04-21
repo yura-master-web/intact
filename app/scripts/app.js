@@ -8,4 +8,4 @@ $(() => {
 
 // import '../blocks/pages/lesson-1/';
 
-console.log('js');
+// console.log('js');

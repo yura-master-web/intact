@@ -1,0 +1,59 @@
+.main-block
+	display flex
+	flex-direction column
+	min-height 100vh
+
+.top-line
+	padding 30px 0 23px
+	display grid
+	border-bottom 2px solid rgba(colors('white'), 10%)
+	grid-template-columns 1fr minmax(1px, 1158px) 1fr
+	&__logo
+		margin-right 95px
+		justify-self end
+	&__phone
+		margin-left 35px
+		letter-spacing 1px
+		color colors('white')
+		transition color $t-time
+		align-self center
+		&:hover
+			color colors('form')
+
+
+.spreader
+	min-height 110px
+	flex 1 1 auto
+
+.container
+	&_header
+		margin-top auto
+		margin-bottom auto
+
+.header-content
+	col()
+	size-xl(6)
+
+	&__main-title
+		margin-bottom 46px
+		font-size $font-size-h1
+		font-weight bold
+		line-height px2rem(90px)
+	&__desc
+		margin-bottom 70px
+		font-size px2rem(16px)
+		line-height px2rem(36px)
+	&__button
+		margin-bottom 36px
+		display flex
+		width 300px
+		height 56px
+		font-weight bold
+		color colors('white')
+		justify-content center
+		align-items center
+
+.header-img
+	position relative
+	col()
+	size-xl(6)

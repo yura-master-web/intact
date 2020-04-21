@@ -1,3 +1,9 @@
+html,
+body
+	font-weight $font-weight-base
+	base-font()
+	touch-action manipulation
+
 .container
 	wrapper()
 	+media-breakpoint-up('sm')
@@ -13,6 +19,47 @@
 		max-width 1170px
 		// max-width 1170px
 
+.row
+	row-flex()
+
+img
+	max-width 100%
+	height auto
+
+.upcs
+	text-transform uppercase
+
+.lwcs
+	text-transform lowercase
+
+.tdn
+	text-decoration none
+
+.bdrs
+	border-radius 4px
+
+// .btn-primary
+.btn-hover
+	position relative
+	&:after
+		position absolute
+		top 0
+		right 0
+		left 0
+		bottom 0
+		content ''
+		background-color #fff
+		border-radius 4px
+		opacity 0
+		transition opacity $t-time
+	&:hover:after
+		opacity .15
+
+// .btn-sec:hover
+// 	background-color rgba(colors('secondary-color'), .7)
+// .btn-primary
+// 	background-color rgba(colors('accent'), .7)
+
 	// @media (min-width: 576px)
 	// 	max-width 570px
 	// @media (min-width: 768px)
@@ -22,13 +69,16 @@
 	// @media (min-width: 1200px)
 	// 	max-width 1170px
 
-.row
-	row-flex()
 
-.col-12
-	col()
-	// size-xl(12)
-	// size-md(12)
-	size(12)
-	size-md(3)
-	size-xl(6)
+
+// .col-12
+// 	col()
+// 	// size-xl(12)
+// 	// size-md(12)
+// 	size(12)
+// 	size-md(3)
+// 	size-xl(6)
+
+
+// h1
+// 	font-size $font-size-h1

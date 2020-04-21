@@ -1,0 +1,34 @@
+mixin main-block()
+	+b.main-block.bg-accent&attributes(attributes)
+		+b.top-line
+			+e.logo
+				img(src="/assets/images/intact_logo-white.png")
+
+			+b.menu.cl-form
+				each item in getData('menu')
+					+e('a').item.tdn.upcs(href="#{item.url}") #{item.name}
+
+				+e('a').item_btn.tdn.upcs.bdrs(href="javascript:;") Вам перезвонить?
+
+			+e('a').phone.tdn.upcs(href="tel:+74959894049") +7 495 989 40 49
+
+		+b.spreader
+
+		+b.container_header
+			.row
+				+b.header-content
+					+e.text
+						+e('h1').main-title.cl-white Корпоративная система обмена файлами
+						+e('p').desc.cl-white Не Яндекс.Диск, не Google Drive, не Dropbox. Собственная система, решающая много сложностей, связанных с хранением и передачей файлов.
+						+e('a').button.btn-hover.bg-secondary-color.tdn.upcs.bdrs(href="javascript:;") Связаться с нами
+
+				+b.header-img
+					+b.main-img
+						+e.elipse_1
+						+e.elipse_2
+						+e.elipse_3
+						+e.elipse_4
+						+e.img(src="/assets/images/server.png")
+					//- include ./server.svg
+
+		+b.spreader
