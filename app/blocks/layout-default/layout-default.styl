@@ -1,3 +1,22 @@
+html
+	// scroll-snap-type mandatory
+	// scroll-snap-points-y repeat(50vh)
+	scroll-snap-type y mandatory
+	scroll-behavior smooth
+	// scroll-padding 100%
+
+	.remodal-bg
+		scroll-snap-align start
+
 .main-wrapper
 	overflow hidden
 	font-size px2rem(18px)
+
+.block-title // h2
+	font-size $font-size-h2
+	font-weight bold
+	line-height px2rem(70px)
+.sub-title // h3
+	font-size $font-size-h3
+	font-weight bold
+	line-height px2rem(30px)

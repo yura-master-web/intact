@@ -1,0 +1,59 @@
+.problem-card
+	padding 167px 50px 52px
+	font-size px2rem(16px)
+	background-repeat no-repeat
+	background-position 50px 59px
+	border 2px solid colors('border')
+	transition background-color $t-time, border-color $t-time, color $t-time
+	col()
+	size(4)
+
+	&:hover
+		color colors('white')
+		background-color colors('accent')
+		border-color colors('accent')
+
+	&:before
+		position absolute
+		top calc(100% + 2px)
+		left 50%
+		width 2px
+		height 140px
+		content ''
+		background-color colors('border')
+		transition background-color $t-time
+		transform translateX(-50%)
+
+		~/:hover^[1..1]
+			background-color colors('accent')
+
+	&:after
+		position absolute
+		top calc(100% + 142px)
+		left 50%
+		width 11px
+		height 11px
+		content ''
+		background-color colors('accent')
+		border-radius 50%
+		opacity 0
+		box-shadow 0 0 7.2px 9px rgba(colors('accent'), .1)
+		transform translateX(-50%)
+		transition top $t-time linear, opacity 0s linear $t-time
+
+		~/:hover^[1..1]
+			top calc(100% + 142px / 2)
+			opacity 1
+			transition top $t-time linear, opacity 0s linear 0s
+
+	&_folder
+		background-image url(../images/folder-search.png)
+	&_big
+		background-image url(../images/message.png)
+	&_sec
+		background-image url(../images/lock.png)
+
+	&__title
+		margin-bottom 17px
+	&__desc
+		line-height px2rem(30px)

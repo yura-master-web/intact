@@ -38,9 +38,24 @@ img
 .bdrs
 	border-radius 4px
 
+.fwb
+	font-weight bold
+.fsi
+	font-style italic
+
+.pos-rel
+	position relative
+
 // .btn-primary
 .btn-hover
 	position relative
+	display flex
+	width 359px
+	height 56px
+	font-weight bold
+	color colors('white')
+	justify-content center
+	align-items center
 	&:after
 		position absolute
 		top 0
@@ -54,6 +69,8 @@ img
 		transition opacity $t-time
 	&:hover:after
 		opacity .15
+	&_main
+		width 300px
 
 // .btn-sec:hover
 // 	background-color rgba(colors('secondary-color'), .7)
