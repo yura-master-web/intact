@@ -82,3 +82,7 @@ rem2px($rem)
 			convert(unquote($rem))
 		else
 			round(unit(convert(unquote($rem)) * $font-size-root, 'px'))
+
+svgSize($icon)
+	width $icon[0]
+	height $icon[1]

@@ -1,0 +1,86 @@
+.functions-tabs
+	border 2px solid colors('border')
+	col()
+	size(12)
+
+	&__header
+		display flex
+		border-bottom 2px solid colors('border')
+
+	&__content
+		height 600px
+
+.functions-tabs-item
+	display flex
+	min-width 128px
+	height 128px
+	cursor pointer
+	transition background-color $t-time, color $t-time, flex-basis .4s
+	flex 1 1 128px
+	align-items center
+	&.is-active
+		padding-right 163px
+		background-color colors('accent')
+		flex 1 1 100%
+
+	&:hover
+		color colors('white')
+		background-color colors('accent')
+
+	&:nth-last-child(n+2)
+		border-right 2px solid colors('border')
+
+	&__wrap-icon
+		display flex
+		justify-content center
+		min-width 128px
+
+	&__icon
+		transition stroke $t-time
+		fill none
+		stroke colors('accent')
+		stroke-miterlimit 10
+		stroke-width 2px
+
+		~/.is-active &
+		~/:hover &
+			stroke colors('white')
+
+		&_integ
+			svgSize(44px 48px)
+		&_loop
+			svgSize(44px 44px)
+		&_infin
+			svgSize(44.46px 43px)
+		&_mob
+			svgSize(28px 48px)
+		&_set
+			svgSize(44px 44px)
+
+
+	&__txt
+		visibility hidden
+		opacity 0
+		transition opacity $t-time
+		~/.is-active &
+			visibility visible
+			color colors('white')
+			opacity 1
+			transition opacity $t-time linear $t-time
+
+
+.functions-content-item
+	display none
+	height 100%
+	&_1
+		background-image url(../images/scr-1.jpg)
+	&_2
+		background-image url(../images/scr-2.jpg)
+	&_3
+		background-image url(../images/scr-3.jpg)
+	&_4
+		background-image url(../images/scr-4.jpg)
+	&_5
+		background-image url(../images/scr-1.jpg)
+	// &.is-active
+		// display block

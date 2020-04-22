@@ -9,3 +9,5 @@ $(() => {
 // import '../blocks/pages/lesson-1/';
 
 // console.log('js');
+
+import '../blocks/functions/functions-tabs';

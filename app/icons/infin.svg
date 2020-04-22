@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.46" height="42.76" viewBox="0 0 44.46 42.76">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #2947f2;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>infin</title>
+  <path class="a" d="M21.28,9.53l6-6A7.91,7.91,0,0,1,38.5,3.14L41.32,6A7.91,7.91,0,0,1,41,17.14l-7.55,7.55A7.91,7.91,0,0,1,22.26,25l-1.41-1.41m2.78-4.48-1.41-1.41A7.91,7.91,0,0,0,11,18.07L3.49,25.62a7.91,7.91,0,0,0-.35,11.17L6,39.62a7.91,7.91,0,0,0,11.17-.35l6-6"/>
+</svg>

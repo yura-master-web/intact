@@ -3,6 +3,8 @@ include /blocks/main-block/main-block
 include /blocks/problems/problems
 include /blocks/banner-leave-request/banner-leave-request
 include /blocks/reason/reason
+include /blocks/functions/functions
+include /blocks/icon/icon
 
 block head
 	- var pageTitle = 'Intact';
@@ -16,3 +18,6 @@ block content
 	.remodal-bg.main-wrapper.cl-text
 		.container
 			+reason
+	.remodal-bg.main-wrapper.cl-text
+		.container
+			+functions
