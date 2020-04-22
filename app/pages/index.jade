@@ -2,6 +2,7 @@ extends /blocks/layout-default/layout-default
 include /blocks/main-block/main-block
 include /blocks/problems/problems
 include /blocks/banner-leave-request/banner-leave-request
+include /blocks/reason/reason
 
 block head
 	- var pageTitle = 'Intact';
@@ -12,3 +13,6 @@ block content
 	.remodal-bg.main-wrapper.cl-text
 		.container
 			+problems
+	.remodal-bg.main-wrapper.cl-text
+		.container
+			+reason

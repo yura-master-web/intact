@@ -1,0 +1,86 @@
+.reason-tag
+	row-flex()
+	align-items center
+
+	&__desc-wrap
+		padding 41px 70px 40px 153px
+		background-repeat no-repeat
+		background-position 50px 50%
+		border 2px solid colors('border')
+		transition background-color $t-time, color $t-time, border-color $t-time
+		col()
+		size(6)
+
+		&:hover
+			color colors('white')
+			background-color colors('accent')
+			border-color colors('accent')
+
+		&:before
+		&:after
+			position absolute
+			top 50%
+			pointer-events none
+			content ''
+		&:before
+			top 50%
+			left calc(100% + 2px)
+			width 100vw
+			height 2px
+			content ''
+			background-color colors('border')
+			transform translateY(-50%)
+			~/:nth-of-type(even) ^[0..2]
+				right calc(100% + 2px)
+				left auto
+
+			^[-1]:hover^[2..2] // @stylint ignore
+				background-color colors('accent')
+
+		&:after
+			left calc(100% + 100vw)
+			width 11px
+			height 11px
+			background-color colors('accent')
+			border-radius 50%
+			box-shadow 0 0 17px 3px rgba(colors('accent'), .6)
+			transform translateY(-50%)
+			transition left $t-time linear
+			~/:nth-of-type(even) ^[0..2]
+				right 100vw
+				left auto
+				transition right $t-time linear
+
+			^[-1]:hover^[2..2] // @stylint ignore
+				left calc(100% + 60px)
+			~/:nth-of-type(even) ^[-1]:hover^[2..2] // @stylint ignore
+				right calc(100% + 60px)
+
+		&_monik
+			background-image url(../images/monik.png)
+		&_comp
+			background-image url(../images/comp.png)
+			background-position 61px 50%
+		&_home
+			background-image url(../images/home.png)
+			background-position 56px 50%
+		&_lego
+			padding-right 80px
+			background-image url(../images/lego.png)
+
+	&:nth-of-type(even)
+		justify-content flex-end
+	&:nth-last-child(n+2)
+		margin-bottom 30px
+
+
+	&__num
+		font-size px2rem(60px)
+		line-height 1
+		color colors('border')
+		align-items center
+		col()
+		size(1)
+
+	&__desc
+		line-height px2rem(30px)

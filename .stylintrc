@@ -214,7 +214,7 @@
 	// "trailingWhitespace": "never", // bug: throw error when there are spaces after rule before comment
 	"universal": "never",
 	"valid": true, // discuss 8
-	"mixins": ["size", "margin-x", "margin-y", "padding-x", "padding-y", "sprite", "retinaSprite", "offset-distance", "offset-rotate", "scroll-snap-type", "scroll-snap-align", "scroll-snap-type", "scroll-behavior"],
+	"mixins": ["size", "margin-x", "margin-y", "padding-x", "padding-y", "sprite", "retinaSprite", "offset-distance", "offset-rotate", "scroll-snap-type", "scroll-snap-align", "scroll-snap-type", "scroll-behavior", "scroll-margin-top"],
 	"zeroUnits": "never",
 	"zIndexNormalize": false
 }

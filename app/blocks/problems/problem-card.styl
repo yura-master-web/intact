@@ -13,13 +13,16 @@
 		background-color colors('accent')
 		border-color colors('accent')
 
+	&:after
 	&:before
 		position absolute
-		top calc(100% + 2px)
 		left 50%
+		pointer-events none
+		content ''
+	&:before
+		top calc(100% + 2px)
 		width 2px
 		height 140px
-		content ''
 		background-color colors('border')
 		transition background-color $t-time
 		transform translateX(-50%)
@@ -28,16 +31,13 @@
 			background-color colors('accent')
 
 	&:after
-		position absolute
 		top calc(100% + 142px)
-		left 50%
 		width 11px
 		height 11px
-		content ''
 		background-color colors('accent')
 		border-radius 50%
 		opacity 0
-		box-shadow 0 0 7.2px 9px rgba(colors('accent'), .1)
+		box-shadow 0 0 17px 3px rgba(colors('accent'), .6)
 		transform translateX(-50%)
 		transition top $t-time linear, opacity 0s linear $t-time
 
