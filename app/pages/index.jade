@@ -8,6 +8,7 @@ include /blocks/reason/reason
 include /blocks/functions/functions
 include /blocks/stages/stages
 include /blocks/limitations/limitations
+include /blocks/trust-us/trust-us
 
 block head
 	- var pageTitle = 'Intact';
@@ -17,16 +18,25 @@ block content
 		+main-block
 	.remodal-bg.main-wrapper.cl-text
 		.container
+			//- Проблемы хранения и обмена файлами
 			+problems
 	.remodal-bg.main-wrapper.cl-text
 		.container
+			//- Четыре причины иметь собственную систему обмена файлами
 			+reason
 	.remodal-bg.main-wrapper.cl-text
 		.container
+			//- Функции системы
 			+functions
 	.remodal-bg.main-wrapper.cl-text
 		.container
+			//- Этапы внедрения
 			+stages
 	.remodal-bg.main-wrapper.cl-text
 		.container
+			//- Ограничения и системные требования
 			+limitations
+	.remodal-bg.main-wrapper.cl-text
+		.container
+			//- нам доверяют
+			+trust-us

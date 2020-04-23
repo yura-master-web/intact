@@ -1,5 +1,6 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
+import 'owl.carousel';
 // import 'axios';
 
 $(() => {
@@ -12,3 +13,4 @@ $(() => {
 
 import '../blocks/functions/functions-tabs';
 import '../blocks/limitations/limitations-tabs';
+import '../blocks/trust-us/slider';
