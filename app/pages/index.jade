@@ -9,6 +9,7 @@ include /blocks/functions/functions
 include /blocks/stages/stages
 include /blocks/limitations/limitations
 include /blocks/trust-us/trust-us
+include /blocks/integrator/integrator
 
 block head
 	- var pageTitle = 'Intact';
@@ -40,3 +41,7 @@ block content
 		.container
 			//- нам доверяют
 			+trust-us
+	.remodal-bg.main-wrapper.cl-text
+		.container
+			//- INTACT. Правильный интегратор
+			+integrator
