@@ -1,9 +1,8 @@
 mixin stages()
-	+b.stages.row&attributes(attributes)
-		+e.wrap-title
-			.row
-				+e('h2').title.block-title Этапы внедрения
+	+b.stages.row.justify-center&attributes(attributes)
+		+e('h2').title.block-title Этапы внедрения
 
+	.row
 		+b.stages-cards.pos-rel
 			+b.stages-card-item.row
 				+e('p').num.txt-num 01

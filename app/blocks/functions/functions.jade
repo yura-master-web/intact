@@ -1,9 +1,8 @@
 mixin functions()
-	+b.functions.row&attributes(attributes)
-		+e.wrap-title
-			.row
-				+e('h2').title.block-title Функции системы
+	+b.functions.row.justify-center&attributes(attributes)
+		+e('h2').title.block-title Функции системы
 
+	.row
 		+b.functions-tabs.bdrs.js-finctions-tabs
 			+e.header
 				+b.functions-tabs-item.js-finctions-tabs-item.is-active(data-tab-id="1")
