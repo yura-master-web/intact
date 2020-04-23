@@ -1,0 +1,52 @@
+.result-implem
+	col()
+	size(12)
+	&__wrap
+		justify-content center
+		row-flex()
+
+.result-implem-item
+	display flex
+	flex-wrap wrap
+	col()
+	size(10)
+	&:first-child
+		padding 50px 24px 46px
+		border 4px solid colors('accent')
+		border-radius 4px 4px 0 0
+	&:last-child
+		padding 54px 0 34px
+		border 2px solid colors('border')
+		border-top none
+		border-radius 0 0 4px 4px
+
+	&__title
+		margin-bottom 45px
+		width 100%
+		font-size px2rem(36px)
+		line-height 1
+		text-align center
+		~/:last-child &
+			margin-bottom 66px
+
+	&__thesiz
+		width 50%
+		line-height px2rem(70px)
+		span
+			margin-right 13px
+			margin-left 35px
+			font-family 'Asket Extended'
+			font-size px2rem(26px)
+			font-weight 300
+
+	&__cost
+		display flex
+		flex-direction column
+		col()
+		size(6)
+		align-items center
+	&__cost-title
+		margin-bottom 11px
+	&__cost-price
+		font-size px2rem(46px)
+		line-height px2rem(68px)

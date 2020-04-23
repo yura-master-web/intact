@@ -1,10 +1,12 @@
 extends /blocks/layout-default/layout-default
+include /blocks/icon/icon
+
 include /blocks/main-block/main-block
 include /blocks/problems/problems
 include /blocks/banner-leave-request/banner-leave-request
 include /blocks/reason/reason
 include /blocks/functions/functions
-include /blocks/icon/icon
+include /blocks/stages/stages
 
 block head
 	- var pageTitle = 'Intact';
@@ -21,3 +23,6 @@ block content
 	.remodal-bg.main-wrapper.cl-text
 		.container
 			+functions
+	.remodal-bg.main-wrapper.cl-text
+		.container
+			+stages

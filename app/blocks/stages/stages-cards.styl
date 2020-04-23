@@ -1,0 +1,68 @@
+.stages-cards
+	col()
+	size(12)
+
+.stages-card-item
+	align-items center
+	&__num
+		col()
+		size(1)
+
+	&__wrap-des
+		padding 52px 45px 50px 152px
+		background-repeat no-repeat
+		background-position 48px 57px
+		col()
+		size(5)
+		flex-grow 1
+		align-self stretch
+
+		&:nth-of-type(odd)
+			margin-right 0
+		&:nth-of-type(even)
+			margin-left 0
+
+
+		~/:first-child &
+			&_ser
+			&_lap
+				border-top 2px solid colors('border')
+				border-bottom 2px solid colors('border')
+			&_ser
+				border-left 2px solid colors('border')
+				border-right 2px solid colors('border')
+			&_lap
+				border-right 2px solid colors('border')
+
+		~/:last-child &
+			&_mon
+			&_clo
+				border-bottom 2px solid colors('border')
+			&_mon
+				border-left 2px solid colors('border')
+				border-right 2px solid colors('border')
+			&_clo
+				border-right 2px solid colors('border')
+
+		&_ser
+			background-image url(../images/st-comp.png)
+			background-position 58px 57px
+			border-radius 4px 0 0 0
+		&_lap
+			background-image url(../images/st-laptop.png)
+			border-radius 0 4px 0 0
+		&_mon
+			padding-right 54px
+			background-image url(../images/st-mon.png)
+			border-radius 0 0 0 4px
+		&_clo
+			padding-right 48px
+			background-image url(../images/st-cloud.png)
+			border-radius 0 0 4px 0
+
+	&__title
+		margin-bottom 17px
+
+	&__txt
+		font-size px2rem(16px)
+		line-height px2rem(30px)

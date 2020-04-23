@@ -1,5 +1,7 @@
-mixin banner-leave-request()
-	+b.banner-leave-request.bg-accent.bdrs&attributes(attributes)
+mixin banner-leave-request(mod)
+	+b.banner-leave-request(
+		class="#{mod ? mod : ''}"
+	).bg-accent.bdrs&attributes(attributes)
 		+e('p').desc.cl-white.fsi
 			block
 		+e('a').button.btn-hover.bg-secondary-color.tdn.upcs.bdrs(href="javascript:;") Оставить заявку
