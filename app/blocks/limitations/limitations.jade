@@ -1,0 +1,32 @@
+mixin limitations()
+	+b.limitations.row&attributes(attributes)
+		+e.wrap-title
+			.row
+				+e('h2').title.block-title Ограничения и системные требования
+
+		+e.wrap-tabs
+			.row
+				+b.limitations-tabs.js-limitations-tabs
+					+b.limitations-tabs-header
+						+e.item.fwb.pos-rel.is-active.js-limitations-tabs-header-imte(
+							data-head-id="0"
+						) Список ограничений
+						+e.item.fwb.pos-rel.js-limitations-tabs-header-imte(
+							data-head-id="1"
+						) Требования к инфраструктуре
+
+					+e.content.bdrs
+						+b.limitations-tab-content.js-limitations-tabs-cont-item(
+							data-cont-id="0"
+						)
+							+e('p').thesis Стоимость поддержки указана для системы до 100 пользователей
+							+e('p').thesis Интеграция с Active Directiry и почтой включена
+							+e('p').thesis Обмен файлами через Web-интерфейс и синхронизация папок Windows
+							+e('p').thesis Дополнительная кастомизация и интеграция не включены
+						+b.limitations-tab-content.js-limitations-tabs-cont-item(
+							data-cont-id="1"
+						)
+							+e('p').thesis Стоимость поддержки указана для системы до 100 пользователей!
+							+e('p').thesis Интеграция с Active Directiry и почтой включена!
+							+e('p').thesis Обмен файлами через Web-интерфейс и синхронизация папок Windows!
+							+e('p').thesis Дополнительная кастомизация и интеграция не включены!

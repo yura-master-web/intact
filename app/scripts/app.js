@@ -11,3 +11,4 @@ $(() => {
 // console.log('js');
 
 import '../blocks/functions/functions-tabs';
+import '../blocks/limitations/limitations-tabs';

@@ -7,6 +7,7 @@ include /blocks/banner-leave-request/banner-leave-request
 include /blocks/reason/reason
 include /blocks/functions/functions
 include /blocks/stages/stages
+include /blocks/limitations/limitations
 
 block head
 	- var pageTitle = 'Intact';
@@ -26,3 +27,6 @@ block content
 	.remodal-bg.main-wrapper.cl-text
 		.container
 			+stages
+	.remodal-bg.main-wrapper.cl-text
+		.container
+			+limitations

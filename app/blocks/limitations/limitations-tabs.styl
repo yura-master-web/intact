@@ -1,0 +1,50 @@
+.limitations-tabs
+	col()
+	size(10)
+	&__content
+		padding 70px 22px 31px
+		border 2px solid colors('border')
+
+.limitations-tabs-header
+	display flex
+	justify-content center
+
+	&__item
+		margin 0 30px
+		padding-bottom 23px
+		font-size px2rem(24px)
+		cursor pointer
+		&:after
+			position absolute
+			right 0
+			left 0
+			bottom -3px
+			height 4px
+			content ''
+			background-color transparent
+			transition background-color $t-time
+			^[0..1].is-active^[2..2] // @stylint ignore
+				background-color colors('accent')
+			^[0..1]:not(.is-active):hover^[2..2] // @stylint ignore
+				background-color lighten(colors('accent'), 25%)
+
+
+.limitations-tab-content
+	display flex
+	flex-wrap wrap
+
+	&__thesis
+		position relative
+		margin-bottom 39px
+		padding-left 77px
+		max-width 50%
+		line-height px2rem(30px)
+		flex 1 1 50%
+		&:before
+			position absolute
+			top 0
+			left 58px
+			font-size px2rem(20px)
+			font-weight 900
+			content '-'
+			color colors('accent')
