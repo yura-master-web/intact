@@ -12,6 +12,7 @@ include /blocks/trust-us/trust-us
 include /blocks/integrator/integrator
 include /blocks/contacts/contacts
 include /blocks/footer/footer
+include /blocks/modal/modal
 
 block head
 	- var pageTitle = 'Intact';
@@ -44,3 +45,4 @@ block content
 			//- Контакты
 			+contacts.block-indent
 		+footer
+		+modal
