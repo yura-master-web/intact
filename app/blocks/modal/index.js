@@ -1,3 +1,4 @@
+/*
 console.log('modal');
 window.REMODAL_GLOBALS = {
 	NAMESPACE: 'modal',
@@ -5,7 +6,8 @@ window.REMODAL_GLOBALS = {
 		hashTracking: false
 	}
 };
-
+*/
+/*
 // Что бы в обход всего открыть модальное окно
 let instModal;
 $(() => {
@@ -16,3 +18,4 @@ $(() => {
 		instModal.open();
 	});
 });
+*/

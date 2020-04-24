@@ -19,6 +19,7 @@
 
 
 .spreader
+	display flex
 	min-height 95px
 	flex 1 1 auto
 
@@ -39,6 +40,7 @@
 		line-height px2rem(90px)
 	&__desc
 		margin-bottom 70px
+		padding-right 90px
 		font-size px2rem(16px)
 		line-height px2rem(36px)
 	&__button
@@ -48,3 +50,12 @@
 	position relative
 	col()
 	size-xl(6)
+
+.main-block-arrow
+	position absolute
+	bottom 52px
+	svgSize(17px 58px)
+	fill none
+	stroke colors('white')
+	stroke-miterlimit 10
+	stroke-width 2px
