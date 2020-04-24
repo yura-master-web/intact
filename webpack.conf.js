@@ -16,7 +16,7 @@ export default function makeWebpackConfig({
         },
         mode: debug ? 'development' : 'production',
         // devtool: (sourcemaps || !debug) ? '#source-map' : 'eval',
-        devtool: sourcemaps || !debug ? 'source-map' : 'none',
+        devtool: sourcemaps && debug ? 'source-map' : 'none',
         module: {
             rules: [
                 {

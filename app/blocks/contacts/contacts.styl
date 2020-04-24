@@ -1,6 +1,76 @@
 .contact-form
-	height 100px
-	background #000
-	border 1px solid colors('border')
+	padding 77px 77px 34px
+	display flex
+	background-image url(../images/bg-form.png)
+	flex-wrap wrap
 	col()
 	size(12)
+
+	&__btn-sub
+		margin-top 30px
+		border none
+
+.form-input
+	col()
+	size(4)
+	&__item
+		padding 0 30px
+		width 100%
+		height 56px
+		color inherit
+		background-color transparent
+		border 1px solid currentColor
+		&::placeholder
+			color currentColor
+			opacity 1
+		&.error
+			border-color colors('error')
+
+	&_textarea
+		margin-top 30px
+		size(12)
+		& ^[0]__item
+			padding 16px 30px
+			height 112px
+
+.form-agree
+	margin-top 26px
+	display block
+	cursor pointer
+	&__txt
+		padding-left 26px
+		font-size px2rem(16px)
+		line-height px2rem(24px)
+		&:before
+		&:after
+			position absolute
+			content ''
+			background-color colors('white')
+			transition background-color $t-time
+		&:before
+			top 5px
+			left 0
+			width 12px
+			height 12px
+			border-radius 4px
+		&:after
+			top 8px
+			left 3px
+			width 6px
+			height 6px
+			border-radius 2px
+			transition backgroudn-color $t-time
+
+	&__check:checked ~ ^[0]__txt:after
+		background-color currentColor
+	&__check.error ~ ^[0]__txt:before
+		background-color colors('red')
+
+	// 	^[0]__checkbox:checked ~ &:after
+	// 		background-color colors('accent')
+
+	// &__check.error
+	// 	& ~ ^[0]__checkbox-imitator
+	// 		border-color rgba(colors('error'), .3)
+	// 	& ~ ^[0]__text
+	// 		color colors('error')
