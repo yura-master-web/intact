@@ -8,9 +8,9 @@ mixin main-block()
 				each item in getData('menu')
 					+e('a').item.tdn.upcs(href="#{item.url}") #{item.name}
 
-				+e('a').item_btn.tdn.upcs.bdrs(href="javascript:;") Вам перезвонить?
+				+e('a').item.btn-phone_menu.tdn.upcs.bdrs(href="javascript:;") Вам перезвонить?
 
-			+e('a').phone.tdn.upcs(href="tel:+74959894049") +7 495 989 40 49
+			+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
 
 		+b.spreader
 

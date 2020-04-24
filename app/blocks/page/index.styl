@@ -80,6 +80,29 @@ img
 	&_main
 		width 300px
 
+.btn-phone
+	display flex
+	width 228px
+	height 46px
+	font-weight bold
+	transition border-color $t-time, color $t-time
+	justify-content center
+	align-items center
+	&_menu
+		border 2px solid colors('form')
+		&:hover
+			color colors('white')
+			border-color inherit
+	&_footer
+		border 2px solid colors('accent')
+		&:hover
+			color lighten(colors('accent'), 25%)
+			border-color inherit
+
+.phone-number
+	letter-spacing 1px
+	transition color $t-time
+
 // .btn-sec:hover
 // 	background-color rgba(colors('secondary-color'), .7)
 // .btn-primary
