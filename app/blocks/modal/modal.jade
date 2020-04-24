@@ -3,4 +3,9 @@ mixin modal()
 		data-remodal-id="modal"
 		data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true, hashTracking: false"
 	)&attributes(attributes)
-		h1 Remodal
+		.container
+			+b.modal-form.bg-accent.cl-white.bdrs.ovh.pos-rel
+				+b.btn-close
+				+e('p').title.fwb Спасибо за заявку
+				+e('p').sub-title Подзаголовок, если потребуется
+				+e.bg
