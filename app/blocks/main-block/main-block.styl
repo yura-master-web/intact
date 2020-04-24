@@ -54,8 +54,12 @@
 .main-block-arrow
 	position absolute
 	bottom 52px
+	cursor pointer
+	transition stroke $t-time
 	svgSize(17px 58px)
 	fill none
 	stroke colors('white')
 	stroke-miterlimit 10
 	stroke-width 2px
+	&:hover
+		stroke colors('form')

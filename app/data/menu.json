@@ -1,7 +1,7 @@
 [
 	{
 		"name": "преимущества",
-		"url": "#advantages"
+		"url": "#reason"
 	},
 	{
 		"name": "стоимость",
@@ -17,6 +17,6 @@
 	},
 	{
 		"name": "об Intact",
-		"url": "#about"
+		"url": "#integrator"
 	}
 ]

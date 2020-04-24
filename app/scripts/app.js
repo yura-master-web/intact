@@ -14,6 +14,7 @@ $(() => {
 
 // console.log('js');
 
+import '../blocks/page/';
 import '../blocks/functions/functions-tabs';
 import '../blocks/limitations/limitations-tabs';
 import '../blocks/trust-us/slider';

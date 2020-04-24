@@ -8,7 +8,7 @@ mixin main-block()
 				each item in getData('menu')
 					+e('a').item.tdn.upcs(href="#{item.url}") #{item.name}
 
-				+e('a').item.btn-phone_menu.tdn.upcs.bdrs(href="javascript:;") Вам перезвонить?
+				+e('a').item.btn-phone_menu.tdn.upcs.bdrs(href="#contacts") Вам перезвонить?
 
 			+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
 
@@ -20,7 +20,7 @@ mixin main-block()
 					+e.text
 						+e('h1').main-title.cl-white Корпоративная система обмена файлами
 						+e('p').desc.cl-white Не Яндекс.Диск, не Google Drive, не Dropbox. Собственная система, решающая много сложностей, связанных с хранением и передачей файлов.
-						+e('a').button.btn-hover._main.bg-secondary-color.tdn.upcs.bdrs(href="javascript:;") Связаться с нами
+						+e('a').button.btn-hover._main.bg-secondary-color.tdn.upcs.bdrs(href="#contacts") Связаться с нами
 
 				+b.header-img
 					+b.main-img
@@ -32,4 +32,4 @@ mixin main-block()
 					//- include ./server.svg
 
 		+b.spreader.justify-center.pos-rel
-			+icon('arrow-big', 'block').main-block-arrow
+			+icon('arrow-big', 'block').main-block-arrow.js-main-block-arrow
