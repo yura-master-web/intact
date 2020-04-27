@@ -9,6 +9,14 @@
 
 	&__content
 		height 596px
+		+media-breakpoint-down('lg')
+			height 500px
+		+media-breakpoint-down('md')
+			height 350px
+		+media-breakpoint-down('sm')
+			height 250px
+		+media-breakpoint-down('xs')
+			height 180px
 
 .functions-tabs-item
 	display flex
@@ -18,10 +26,23 @@
 	transition background-color $t-time, color $t-time, flex-basis .4s
 	flex 1 1 128px
 	align-items center
+	+media-breakpoint-down('md')
+		min-width 70px
+		height 100px
+		font-size px2rem(16px)
+	+media-breakpoint-down('sm')
+		font-size px2rem(14px)
+	+media-breakpoint-down('xs')
+		min-width inherit
+		height 40px
 	&.is-active
 		padding-right 163px
 		background-color colors('accent')
 		flex 1 1 100%
+		+media-breakpoint-down('lg')
+			padding-right 20px
+		+media-breakpoint-down('xs')
+			padding-right 0
 
 	&:hover
 		color colors('white')
@@ -34,6 +55,12 @@
 		display flex
 		justify-content center
 		min-width 128px
+		+media-breakpoint-down('md')
+			min-width 70px
+		+media-breakpoint-down('sm')
+			min-width 70px
+		+media-breakpoint-down('xs')
+			min-width 100%
 
 	&__icon
 		transition stroke $t-time
@@ -48,20 +75,32 @@
 
 		&_integ
 			svgSize(44px 48px)
+			+media-breakpoint-down('sm')
+				svgSize(22px 24px)
 		&_loop
 			svgSize(44px 44px)
+			+media-breakpoint-down('sm')
+				svgSize(22px 22px)
 		&_infin
 			svgSize(44.46px 43px)
+			+media-breakpoint-down('sm')
+				svgSize(22.23px 21.5px)
 		&_mob
 			svgSize(28px 48px)
+			+media-breakpoint-down('sm')
+				svgSize(14px 24px)
 		&_set
 			svgSize(44px 44px)
+			+media-breakpoint-down('sm')
+				svgSize(22px 22px)
 
 
 	&__txt
 		visibility hidden
 		opacity 0
 		transition opacity $t-time
+		+media-breakpoint-down('xs')
+			display none
 		~/.is-active &
 			visibility visible
 			color colors('white')
@@ -72,6 +111,8 @@
 .functions-content-item
 	display none
 	height 100%
+	background-position center center
+	background-size cover
 	&_1
 		background-image url(../images/scr-1.jpg)
 	&_2
