@@ -2,12 +2,37 @@
 	position absolute
 	top -137px
 	right -390px
+	width 1843px
 	pointer-events none
+	+media-breakpoint-down('lg')
+		top -103px
+		right -320px
+		width 1450px
+	+media-breakpoint-down('md')
+		top -73px
+		right -310px
+		width 1250px
+	+media-breakpoint-down('sm')
+		position relative
+		top 0
+		right 0
+		left 0
+		width 100%
+		max-height 0
 
 	&__img
 		position relative
-		width 1843px
+		width 100%
 		max-width initial
+		+media-breakpoint-down('sm')
+			top -200px
+			left -30px
+			width 720px
+		+media-breakpoint-down('xs')
+			top -460px
+			left -460px
+			width 1000px
+			opacity .2
 
 	&__elipse
 		position absolute

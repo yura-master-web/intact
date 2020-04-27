@@ -2,6 +2,16 @@
 	display flex
 	flex-direction column
 	min-height 100vh
+	+media-breakpoint-down('sm')
+		overflow hidden
+		height 100vh
+		min-height 1px
+		max-height 480px
+		flex 1 1 480px
+	+media-breakpoint-down('xs')
+		height 100vh
+		min-height inherit
+		max-height 520px
 
 .top-line
 	padding 30px 0
@@ -85,38 +95,100 @@
 		margin-right 50px
 
 
-.spreader
-	display flex
-	min-height 95px
-	flex 1 1 auto
-
 .container
 	&_header
 		margin-top auto
 		margin-bottom auto
 		width 100%
+		+media-breakpoint-down('sm')
+			display flex
+			flex-direction column
+			flex-grow 1
+			.row
+				flex-direction column
+				flex-grow 1
+
+.spreader
+	display flex
+	min-height 95px
+	flex 1 1 auto
+	+media-breakpoint-down('xl')
+		min-height 70px
+	+media-breakpoint-down('md')
+		min-height 40px
+	+media-breakpoint-down('sm')
+		min-height 25px
+		max-height 25px
+	&_top
+		+media-breakpoint-down('xs')
+			min-height 50px
 
 .header-content
+	z-index 2
 	col()
 	size-xl(6)
+	size-md(8)
+	size(12)
+	+media-breakpoint-down('sm')
+		display flex
+		font-size px2rem(16px)
+		flex-grow 1
+
+	&__text
+		display flex
+		flex-direction column
+		flex-grow 1
+		justify-content space-between
 
 	&__main-title
 		margin-bottom 46px
 		font-size $font-size-h1
 		font-weight bold
 		line-height px2rem(90px)
+		+media-breakpoint-down('lg')
+			margin-bottom 40px
+			font-size px2rem(55px)
+			line-height px2rem(70px)
+		+media-breakpoint-down('md')
+			margin-bottom 50px
+			font-size px2rem(45px)
+			line-height px2rem(60px)
+		+media-breakpoint-down('sm')
+			margin-top auto
+			margin-bottom 30px
+			font-size px2rem(30px)
+			line-height px2rem(40px)
+		+media-breakpoint-down('xs')
+			margin-top 10px
+			margin-bottom auto
+			font-size px2rem(26px)
+			line-height px2rem(35px)
 	&__desc
 		margin-bottom 70px
 		padding-right 90px
 		font-size px2rem(16px)
 		line-height px2rem(36px)
+		+media-breakpoint-down('md')
+			margin-bottom 45px
+		+media-breakpoint-down('sm')
+			margin-bottom auto
+			padding-right 0
+			line-height px2rem(28px)
+		+media-breakpoint-down('xs')
+			margin-top 30px
 	&__button
 		margin-bottom 36px
+		+media-breakpoint-down('md')
+			margin-bottom 20px
+		+media-breakpoint-down('sm')
+			margin-top 35px
 
 .header-img
 	position relative
 	col()
 	size-xl(6)
+	size-md(4)
+	size(12)
 
 .main-block-arrow
 	position absolute
@@ -130,3 +202,5 @@
 	stroke-width 2px
 	&:hover
 		stroke colors('form')
+	+media-breakpoint-down('sm')
+		display none

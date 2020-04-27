@@ -36,11 +36,11 @@ mixin main-block()
 				+b.burger-menu.pos-rel.js-btn-mobile-menu
 					+e.line.bg-white
 
-		+b.spreader
+		+b.spreader_top
 
 		+b.container_header
 			.row
-				+b.header-content
+				+b.header-content.pos-rel
 					+e.text
 						+e('h1').main-title.cl-white Корпоративная система обмена файлами
 						+e('p').desc.cl-white Не Яндекс.Диск, не Google Drive, не Dropbox. Собственная система, решающая много сложностей, связанных с хранением и передачей файлов.
@@ -53,7 +53,6 @@ mixin main-block()
 						+e.elipse_3
 						+e.elipse_4
 						+e.img(src="/assets/images/server.png")
-					//- include ./server.svg
 
 		+b.spreader.justify-center.pos-rel
 			+icon('arrow-big', 'block').main-block-arrow.js-main-block-arrow
