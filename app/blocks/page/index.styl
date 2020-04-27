@@ -92,6 +92,11 @@ img
 	align-items center
 	+media-breakpoint-down('sm')
 		width 200px
+	+media-breakpoint-down('xs')
+		width 150px
+		height 40px
+		font-size px2rem(12px)
+		font-weight normal
 	&_menu
 		border 2px solid colors('form')
 		&:hover
@@ -118,6 +123,8 @@ img
 	background-color rgba(colors('black'), .5)
 	opacity 0
 	transition opacity .27s linear 0s
+	+media-breakpoint-down('xs')
+		top 66px
 
 body.is-noscroll
 	position fixed

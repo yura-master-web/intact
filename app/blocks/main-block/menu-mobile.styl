@@ -12,6 +12,8 @@
 		transform translateX(0)
 	+media-breakpoint-down('sm')
 		display block
+	+media-breakpoint-down('xs')
+		top 66px
 
 	.row
 		justify-content flex-end
@@ -20,7 +22,8 @@
 .wrap-menu-mob
 	height 100%
 	col()
-	size(8)
+	size-sm(8)
+	size(12)
 	&:after
 		position absolute
 		top 0
@@ -29,6 +32,16 @@
 		width 100%
 		content ''
 		background-color colors('white')
+	&:before
+		position absolute
+		top 0
+		bottom 0
+		width 100%
+		content none
+		background-color colors('white')
+		+media-breakpoint-down('xs')
+			left -15px
+			content ''
 
 .menu-mobile-list
 	position absolute
@@ -43,3 +56,5 @@
 	&__item
 		margin-top 20px
 		text-align right
+		&:last-child
+			margin-bottom 30px
