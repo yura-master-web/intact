@@ -1,0 +1,45 @@
+.menu-mobile
+	position fixed
+	top 72px
+	right 0
+	left 0
+	bottom 0
+	display none
+	width 100%
+	transform translateX(100%)
+	transition transform $t-time
+	.is-menu-open &
+		transform translateX(0)
+	+media-breakpoint-down('sm')
+		display block
+
+	.row
+		justify-content flex-end
+		height 100%
+
+.wrap-menu-mob
+	height 100%
+	col()
+	size(8)
+	&:after
+		position absolute
+		top 0
+		left 100%
+		bottom 0
+		width 100%
+		content ''
+		background-color colors('white')
+
+.menu-mobile-list
+	position absolute
+	top 0
+	right 0
+	left 0
+	bottom 0
+	overflow-x hidden
+	overflow-y auto
+	background-color colors('white')
+
+	&__item
+		margin-top 20px
+		text-align right

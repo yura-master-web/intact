@@ -20,3 +20,4 @@ import '../blocks/limitations/limitations-tabs';
 import '../blocks/trust-us/slider';
 import '../blocks/contacts/contacts';
 import '../blocks/modal/';
+import '../blocks/main-block/burger-menu';

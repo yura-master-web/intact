@@ -4,18 +4,81 @@
 	min-height 100vh
 
 .top-line
-	padding 30px 0 23px
+	padding 30px 0
 	display grid
-	border-bottom 2px solid rgba(colors('white'), 10%)
-	grid-template-columns 1fr minmax(1px, 1158px) 1fr
+	grid-template-columns minmax(152px, 1fr) minmax(1px, 1158px) minmax(190px, 1fr)
+	+media-breakpoint-down('lg')
+		display none
 	&__logo
-		margin-right 98px
+		margin-right 26%
+		min-width 92px
+		font-size 0
 		justify-self end
+		+media-breakpoint-up('xxl')
+			margin-right 98px
+
 	&__phone
-		margin-left 35px
+		margin-left 11%
+		white-space nowrap
 		align-self center
+		justify-self start
+		@media (min-width: 1920px)
+			margin-left 35px
 		&:hover
 			color colors('form')
+
+.top-line-tablet
+	padding 21px 0
+	display none
+	+media-breakpoint-only('lg')
+		display block
+	+media-breakpoint-only('md')
+		display block
+	&__logo
+		font-size 0
+		col()
+		size(2)
+	&__wrap-menu-phone
+		display flex
+		flex-direction column
+		col()
+		size(10)
+		justify-content space-around
+
+.top-line-mobile
+	padding 12px 0
+	display none
+	+media-breakpoint-down('sm')
+		display block
+	.container
+		display flex
+		justify-content space-between
+		align-items center
+	&__logo
+		display flex
+		align-items center
+
+.phones-mob-line
+	display flex
+	font-size px2rem(14px)
+	justify-content flex-end
+	align-items center
+	&__item
+		margin-right 10px
+	&__phone
+		margin-left 10px
+
+
+
+.tl-border
+	border-bottom 2px solid rgba(colors('white'), 10%)
+
+.tl-tablet-phones
+	display flex
+	align-items center
+	justify-content flex-end
+	&__item
+		margin-right 50px
 
 
 .spreader
