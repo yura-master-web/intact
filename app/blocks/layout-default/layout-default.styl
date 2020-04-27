@@ -19,10 +19,23 @@ html
 	font-weight bold
 	line-height px2rem(70px)
 	text-align center
+	+media-breakpoint-down('lg')
+		margin-bottom 45px
+		font-size px2rem(45px)
+		line-height px2rem(60px)
+	+media-breakpoint-down('md')
+		margin-bottom 25px
+		font-size px2rem(40px)
+		line-height px2rem(50px)
+	+media-breakpoint-down('xs')
+		margin-bottom 20px
+		font-size px2rem(26px)
+		line-height px2rem(36px)
 	col()
 	size(12)
 	&_problems
-		size(6)
+		size-md(8)
+		size-lg(6)
 	&_reason
 		size(6.6)
 	&_limitations
@@ -50,6 +63,9 @@ html
 	font-size $font-size-h3
 	font-weight bold
 	line-height px2rem(30px)
+	+media-breakpoint-down('xs')
+		font-size px2rem(18px)
+		line-height px2rem(24px)
 
 .txt-num
 	font-size px2rem(60px)

@@ -1,12 +1,30 @@
 .problem-card
 	padding 167px 50px 52px
 	font-size px2rem(16px)
+	background-color colors('white')
 	background-repeat no-repeat
 	background-position 50px 59px
 	border 2px solid colors('border')
 	transition background-color $t-time, border-color $t-time, color $t-time
 	col()
-	size(4)
+	size-md(4)
+	+media-breakpoint-down('lg')
+		padding 140px 40px 40px
+		background-position 40px 40px
+	+media-breakpoint-down('md')
+		padding 100px 20px 20px
+		background-position 20px 20px
+	+media-breakpoint-down('sm')
+		margin-bottom 30px
+		padding 20px 20px 20px 95px
+		background-position 15px center
+		&_big
+			background-position 23px center
+	+media-breakpoint-down('xs')
+		margin-bottom 20px
+		padding 20px
+		background-position 20px 18px
+		background-size 30px auto
 
 	&:hover
 		color colors('white')
@@ -26,6 +44,14 @@
 		background-color colors('border')
 		transition background-color $t-time
 		transform translateX(-50%)
+		+media-breakpoint-down('lg')
+			height 110px
+		+media-breakpoint-down('md')
+			height 80px
+		+media-breakpoint-down('sm')
+			height 30px
+		+media-breakpoint-down('xs')
+			height 20px
 
 		~/:hover^[1..1]
 			background-color colors('accent')
@@ -40,20 +66,48 @@
 		box-shadow 0 0 17px 3px rgba(colors('accent'), .6)
 		transform translateX(-50%)
 		transition top $t-time linear, opacity 0s linear $t-time
+		+media-breakpoint-down('lg')
+			top calc(100% + 112px)
+		+media-breakpoint-down('md')
+			top calc(100% + 82px)
+		+media-breakpoint-down('sm')
+			top calc(100% + 32px)
+		+media-breakpoint-down('sm')
+			top calc(100% + 22px)
 
 		~/:hover^[1..1]
 			top calc(100% + 142px / 2)
 			opacity 1
 			transition top $t-time linear, opacity 0s linear 0s
+			+media-breakpoint-down('lg')
+				top calc(100% + 112px / 2)
+			+media-breakpoint-down('md')
+				top calc(100% + 82px / 2)
+			+media-breakpoint-down('sm')
+				top calc(100% + 23px / 2)
+			+media-breakpoint-down('sm')
+				top calc(100% + 12px / 2)
 
 	&_folder
+		z-index 1
 		background-image url(../images/folder-search.png)
 	&_big
+		z-index 2
 		background-image url(../images/message.png)
 	&_sec
+		z-index 3
 		background-image url(../images/lock.png)
+		+media-breakpoint-down('sm')
+			margin-bottom 0
 
 	&__title
 		margin-bottom 17px
+		+media-breakpoint-down('md')
+			margin-bottom 15px
+		+media-breakpoint-down('sm')
+			margin-bottom 10px
+		+media-breakpoint-down('xs')
+			margin-bottom 20px
+			margin-left 45px
 	&__desc
 		line-height px2rem(30px)
