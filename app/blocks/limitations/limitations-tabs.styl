@@ -1,9 +1,14 @@
 .limitations-tabs
 	col()
-	size(10)
+	size(12)
+	size-lg(10)
 	&__content
 		padding 70px 22px 31px
 		border 2px solid colors('border')
+		+media-breakpoint-down('md')
+			padding 50px 20px 20px
+		+media-breakpoint-down('xs')
+			padding 30px 20px 30px 15px
 
 .limitations-tabs-header
 	display flex
@@ -14,6 +19,11 @@
 		padding-bottom 23px
 		font-size px2rem(24px)
 		cursor pointer
+		+media-breakpoint-down('md')
+			font-size px2rem(20px)
+		+media-breakpoint-down('sm')
+			margin 0 15px
+			font-size px2rem(16px)
 		&:after
 			position absolute
 			right 0
@@ -40,6 +50,18 @@
 		max-width 50%
 		line-height px2rem(30px)
 		flex 1 1 50%
+		+media-breakpoint-down('md')
+			padding-left 30px
+		+media-breakpoint-down('sm')
+			margin-bottom 20px
+			max-width 100%
+			flex 1 1 100%
+		+media-breakpoint-down('xs')
+			margin-bottom 15px
+			padding-left 10px
+			font-size px2rem(14px)
+			&:last-child
+				margin-bottom 0
 		&:before
 			position absolute
 			top 0
@@ -48,3 +70,7 @@
 			font-weight 900
 			content '-'
 			color colors('accent')
+			+media-breakpoint-down('md')
+				left 10px
+			+media-breakpoint-down('xs')
+				left -3px

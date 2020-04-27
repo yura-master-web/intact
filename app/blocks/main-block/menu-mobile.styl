@@ -1,13 +1,14 @@
 .menu-mobile
 	position fixed
+	z-index 4
 	top 72px
 	right 0
 	left 0
 	bottom 0
 	display none
 	width 100%
-	transform translateX(100%)
 	transition transform $t-time
+	transform translateX(100%)
 	.is-menu-open &
 		transform translateX(0)
 	+media-breakpoint-down('sm')
