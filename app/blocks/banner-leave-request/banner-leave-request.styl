@@ -30,6 +30,8 @@
 			flex 0 1 435px
 		~/_stages &
 			flex 0 1 600px
+			+media-breakpoint-down('lg')
+				flex 0 1 500px
 	&__button
 		max-width 359px
 		font-size px2rem(18px)
@@ -42,6 +44,10 @@
 		+media-breakpoint-down('xs')
 			height 40px
 			font-size px2rem(16px)
+			&.btn-hover
+				width 100%
+				max-width 100%
+				flex 1 1 auto
 
 	&_problems
 		margin-top 140px

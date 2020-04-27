@@ -51,7 +51,8 @@ mixin stages()
 							| 449 280 
 							span ₽ 
 							span.visuallyhidden руб.
-					+e.cost
+
+					+e.cost._last
 						+e('p').cost-title Выполнение работ
 						+e('p').cost-price.cl-accent.fwb
 							| 558 500 

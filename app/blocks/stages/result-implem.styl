@@ -9,16 +9,25 @@
 	display flex
 	flex-wrap wrap
 	col()
-	size(10)
+	size-lg(9.2)
+	size-xl(10)
 	&:first-child
 		padding 50px 24px 46px
 		border 4px solid colors('accent')
 		border-radius 4px 4px 0 0
+		+media-breakpoint-down('sm')
+			padding 35px 30px 30px
+		+media-breakpoint-down('xs')
+			padding 20px
 	&:last-child
 		padding 54px 0 34px
 		border 2px solid colors('border')
 		border-top none
 		border-radius 0 0 4px 4px
+		+media-breakpoint-down('sm')
+			padding 35px 30px 30px
+		+media-breakpoint-down('xs')
+			padding 20px
 
 	&__title
 		margin-bottom 45px
@@ -26,27 +35,70 @@
 		font-size px2rem(36px)
 		line-height 1
 		text-align center
+		+media-breakpoint-down('sm')
+			margin-bottom 30px
+			font-size px2rem(30px)
+		+media-breakpoint-down('xs')
+			margin-bottom 20px
+			font-size px2rem(26px)
 		~/:last-child &
 			margin-bottom 66px
+			+media-breakpoint-down('md')
+				margin-bottom 40px
+			+media-breakpoint-down('sm')
+				margin-bottom 30px
+			+media-breakpoint-down('xs')
+				margin-bottom 20px
 
 	&__thesiz
 		width 50%
 		line-height px2rem(70px)
+		+media-breakpoint-down('lg')
+			margin-bottom 20px
+			padding-right 20px
+			line-height 24px
+		+media-breakpoint-down('sm')
+			width 100%
+			&:last-child
+				margin-bottom 0
+		+media-breakpoint-down('xs')
+			font-size px2rem(14px)
+			line-height px2rem(20px)
 		span
 			margin-right 13px
 			margin-left 35px
 			font-family 'Asket Extended'
 			font-size px2rem(26px)
 			font-weight 300
+			+media-breakpoint-down('lg')
+				margin-left 0
 
 	&__cost
 		display flex
 		flex-direction column
 		col()
-		size(6)
+		size(12)
+		size-sm(6)
 		align-items center
+		&_last
+			+media-breakpoint-down('xs')
+				margin-top 20px
+
 	&__cost-title
 		margin-bottom 11px
+		+media-breakpoint-down('sm')
+			margin-bottom auto
+		+media-breakpoint-down('xs')
+			font-size px2rem(18px)
+			line-height px2rem(24px)
+			text-align center
+
 	&__cost-price
 		font-size px2rem(46px)
 		line-height px2rem(68px)
+		+media-breakpoint-down('sm')
+			margin-top 15px
+			font-size px2rem(30px)
+			line-height px2rem(30px)
+		+media-breakpoint-down('xs')
+			font-size px2rem(24px)
