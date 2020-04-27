@@ -16,22 +16,30 @@
 .top-line
 	padding 30px 0
 	display grid
+	display -ms-grid // @stylint ignore
 	grid-template-columns minmax(152px, 1fr) minmax(1px, 1158px) minmax(190px, 1fr)
+	-ms-grid-columns minmax(152px, 1fr) minmax(1px, 1158px) minmax(190px, 1fr)
 	+media-breakpoint-down('lg')
 		display none
 	&__logo
 		margin-right 26%
+		display flex
 		min-width 92px
 		font-size 0
 		justify-self end
+		-ms-grid-column 1
+		justify-content flex-end
 		+media-breakpoint-up('xxl')
 			margin-right 98px
 
 	&__phone
 		margin-left 11%
+		display flex
 		white-space nowrap
-		align-self center
 		justify-self start
+		-ms-grid-column 3
+		-ms-grid-row 1
+		align-items center
 		@media (min-width: 1920px)
 			margin-left 35px
 		&:hover
@@ -165,9 +173,11 @@
 			line-height px2rem(35px)
 	&__desc
 		margin-bottom 70px
-		padding-right 90px
+		padding-right 300px
 		font-size px2rem(16px)
 		line-height px2rem(36px)
+		+media-breakpoint-down('lg')
+			padding-right 90px
 		+media-breakpoint-down('md')
 			margin-bottom 45px
 		+media-breakpoint-down('sm')

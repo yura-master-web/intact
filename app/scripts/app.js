@@ -1,4 +1,5 @@
-import svg4everybody from 'svg4everybody';
+import svg4everybody from 'svg4everybody'; // не работает в ie 11
+// import 'svgxuse';
 import $ from 'jquery';
 import 'owl.carousel';
 import 'jquery-validation';
