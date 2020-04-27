@@ -37,7 +37,7 @@ html
 		size-md(8)
 		size-lg(6)
 	&_reason
-		size(6.6)
+		size-xl(6.6)
 	&_limitations
 		margin-bottom 95px
 		size(6.6)
@@ -71,3 +71,5 @@ html
 	font-size px2rem(60px)
 	line-height 1
 	color colors('border')
+	+media-breakpoint-down('sm')
+		font-size px2rem(45px)

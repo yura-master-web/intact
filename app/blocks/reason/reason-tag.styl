@@ -8,8 +8,21 @@
 		background-position 50px 50%
 		border 2px solid colors('border')
 		transition background-color $t-time, color $t-time, border-color $t-time
+
 		col()
-		size(6)
+		size-xs(12)
+		size-sm(9)
+		size-md(10)
+		size-lg(9)
+		size-xl(6)
+		+media-breakpoint-down('sm')
+			padding 20px 20px 20px 80px
+			background-position 24px 50%
+		+media-breakpoint-down('xs')
+			padding 20px 20px 20px 70px
+			font-size px2rem(14px)
+			background-position 17px center
+			background-size 30px auto
 
 		&:hover
 			color colors('white')
@@ -58,26 +71,51 @@
 
 		&_monik
 			background-image url(../images/monik.png)
+			+media-breakpoint-down('sm')
+				padding 20px 20px 20px 100px
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
 		&_comp
 			background-image url(../images/comp.png)
-			background-position 61px 50%
+			+media-breakpoint-up('md')
+				background-position 61px 50%
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
 		&_home
 			background-image url(../images/home.png)
-			background-position 56px 50%
+			+media-breakpoint-up('md')
+				background-position 56px 50%
+			+media-breakpoint-down('sm')
+				padding 20px 20px 20px 100px
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
 		&_lego
-			padding-right 80px
 			background-image url(../images/lego.png)
+			+media-breakpoint-up('md')
+				padding-right 80px
+			+media-breakpoint-down('sm')
+				padding 20px 20px 20px 100px
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
 
 	&:nth-of-type(even)
 		justify-content flex-end
 	&:nth-last-child(n+2)
 		margin-bottom 30px
+		+media-breakpoint-down('xs')
+			margin-bottom 20px
 
 
 	&__num
 		align-items center
 		col()
-		size(1)
+		size-xs(0)
+		size-sm(2)
+		size-md(2)
+		size-lg(2)
+		size-xl(1)
+		+media-breakpoint-down('xs')
+			display none
 
 	&__desc
 		line-height px2rem(30px)
