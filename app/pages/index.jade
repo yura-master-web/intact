@@ -1,16 +1,49 @@
 extends /blocks/layout-default/layout-default
+include /blocks/icon/icon
+
+include /blocks/main-block/main-block
+include /blocks/problems/problems
+include /blocks/banner-leave-request/banner-leave-request
+include /blocks/reason/reason
+include /blocks/functions/functions
+include /blocks/stages/stages
+include /blocks/limitations/limitations
+include /blocks/trust-us/trust-us
+include /blocks/integrator/integrator
+include /blocks/contacts/contacts
+include /blocks/footer/footer
+include /blocks/modal/modal
 
 block head
 	- var pageTitle = 'Intact';
 
 block content
-	.container
-		.row
-			.col-12.mt-5
-				h1 Общий список
-			.col-12.mt-3.index-html
-				a.link(href="/lesson-1.html") Lesson 1 <br />
-				a.link(href="/lesson-2.html") Lesson 2 <br />
-				a.link(href="/carousel.html") Carousel <br />
-				a.link(href="/swiper.html") Swiper <br />
-				a.link(href="/lesson-4.html") Lesson 4 <br />
+	.remodal-bg.main-wrapper.cl-text
+		+b.bg-mask
+		+main-block.js-main-block
+		.container
+			//- Проблемы хранения и обмена файлами
+			+problems#problems.block-indent
+		.container
+			//- Четыре причины иметь собственную систему обмена файлами
+			+reason#reason.block-indent
+		.container
+			//- Функции системы
+			+functions#functions.block-indent
+		.container
+			//- Этапы внедрения
+			+stages#cost.block-indent
+		.container
+			//- Ограничения и системные требования
+			+limitations#limitations.block-indent
+		.container
+			//- нам доверяют
+			+trust-us.block-indent
+		.container
+			//- INTACT. Правильный интегратор
+			+integrator#integrator.block-indent_min
+		.container
+			//- Контакты
+			+contacts#contacts.block-indent
+		+footer
+		+modal

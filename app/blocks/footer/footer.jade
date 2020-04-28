@@ -1,0 +1,12 @@
+mixin footer()
+	+b.footer&attributes(attributes)
+		.container
+			.row
+				+b.footer-logo-data
+					+e('img').logo(src="/assets/images/intact-logo-black.png" alt="логотип intact")
+					+e.data
+						p © 2016-2020 
+						p ООО «Интакт»
+				+b.footer-phone
+					+b('a').btn-phone_footer.tdn.upcs.bdrs.cl-accent(href="#contacts") Вам перезвонить?
+					+b('a').footer-number.phone-number.tdn.upcs.cl-text.fwb(href="tel:+74959894049") +7 495 989 40 49

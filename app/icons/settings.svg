@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #2947f2;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>settings</title>
+  <path class="a" d="M4,1V18m0,6V43m12-9v9M16,1V28M28,14V43M28,1V8M40,1V37M4,18a3,3,0,1,0,3,3A3,3,0,0,0,4,18ZM16,28a3,3,0,1,0,3,3A3,3,0,0,0,16,28ZM28,8a3,3,0,1,0,3,3A3,3,0,0,0,28,8ZM40,37a3,3,0,1,0,3,3A3,3,0,0,0,40,37Z"/>
+</svg>

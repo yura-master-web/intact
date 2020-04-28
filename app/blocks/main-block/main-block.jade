@@ -1,0 +1,68 @@
+mixin main-block()
+	+b.main-block.bg-accent&attributes(attributes)
+		+b.top-line.tl-border
+			+e.logo
+				img(src="/assets/images/intact_logo-white.png")
+
+			+b.menu.cl-form
+				each item in getData('menu')
+					+e('a').item.tdn.upcs(href="#{item.url}") #{item.name}
+
+				+e('a').item.btn-phone_menu.tdn.upcs.bdrs(href="#contacts") Вам перезвонить?
+
+			+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
+
+		+b.top-line-tablet.tl-border
+			.container
+				.row
+					+e.logo
+						img(src="/assets/images/intact_logo-white.png")
+
+					+e.wrap-menu-phone
+						+b.menu.tl-tablet-menu.cl-form
+							each item in getData('menu')
+								+e('a').item.tdn.upcs(href="#{item.url}") #{item.name}
+						+b.tl-tablet-phones
+							+e('a').item.btn-phone_menu.tdn.upcs.bdrs.cl-form(href="#contacts") Вам перезвонить?
+							+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
+
+		+b.top-line-mobile.tl-border
+			.container
+				+e.logo
+					img(src="/assets/images/intact_logo-white-mob.png")
+				+b.phones-mob-line
+					+e('a').item.btn-phone_menu.tdn.upcs.bdrs.cl-form(href="#contacts") Вам перезвонить?
+					+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
+				+b.burger-menu.pos-rel.js-btn-mobile-menu
+					+e.line.bg-white
+
+		+b.spreader_top
+
+		+b.container_header
+			.row
+				+b.header-content.pos-rel
+					+e.text
+						+e('h1').main-title.cl-white Корпоративная система обмена файлами
+						+e('p').desc.cl-white Не Яндекс.Диск, не Google Drive, не Dropbox. Собственная система, решающая много сложностей, связанных с хранением и передачей файлов.
+						+e('a').button.btn-hover._main.bg-secondary-color.tdn.upcs.bdrs(href="#contacts") Связаться с нами
+
+				+b.header-img
+					+b.main-img
+						+e.elipse_1
+						+e.elipse_2
+						+e.elipse_3
+						+e.elipse_4
+						+e.img(src="/assets/images/server.png")
+
+		+b.spreader.justify-center.pos-rel
+			+icon('arrow-big', 'block').main-block-arrow.js-main-block-arrow
+
+		.container.menu-mobile
+			.row
+				+b.wrap-menu-mob.pos-rel
+					+b('ul').menu-mobile-list
+						each item in getData('menu')
+							+e('li').item
+								+e('a').link.tdn.upcs.js-mob-menu-item(href="#{item.url}") #{item.name}
+						+e('li').item
+							+e('a').phone.tdn.upcs.phone-number(href="tel:+74959894049") +7 495 989 40 49

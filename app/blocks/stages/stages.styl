@@ -1,0 +1,36 @@
+.stages-cards
+	margin-bottom 140px
+	+media-breakpoint-down('lg')
+		margin-bottom 110px
+	+media-breakpoint-down('md')
+		margin-bottom 80px
+	+media-breakpoint-down('sm')
+		margin-bottom 30px
+	+media-breakpoint-down('xs')
+		margin-bottom 20px
+	&:after
+		position absolute
+		top calc(100%)
+		left calc(50% - 2px)
+		width 2px
+		height 140px
+		content ''
+		background-color colors('border')
+		+media-breakpoint-down('lg')
+			height 110px
+		+media-breakpoint-down('md')
+			height 80px
+		+media-breakpoint-down('sm')
+			height 30px
+		+media-breakpoint-down('xs')
+			height 20px
+
+.result-implem
+	margin-bottom 99px
+	+media-breakpoint-down('md')
+		margin-bottom 80px
+	+media-breakpoint-down('sm')
+		margin-bottom 30px
+	+media-breakpoint-down('xs')
+		margin-bottom 20px
+

@@ -1,0 +1,84 @@
+.main-img
+	position absolute
+	top -137px
+	right -390px
+	width 1843px
+	pointer-events none
+	+media-breakpoint-down('lg')
+		top -103px
+		right -320px
+		width 1450px
+	+media-breakpoint-down('md')
+		top -73px
+		right -310px
+		width 1250px
+	+media-breakpoint-down('sm')
+		position relative
+		top 0
+		right 0
+		left 0
+		width 100%
+		max-height 0
+
+	&__img
+		position relative
+		width 100%
+		max-width initial
+		+media-breakpoint-down('sm')
+			top -200px
+			left -30px
+			width 720px
+		+media-breakpoint-down('xs')
+			top -460px
+			left 20%
+			width 1000px
+			opacity .2
+			transform translateX(-50%)
+
+	&__elipse
+		position absolute
+		width 13px
+		height 9px
+		background-color #fff
+		border-radius 50%
+		box-shadow 0 0 17px 3px rgba(colors('white'), .6)
+		offset-rotate reverse
+		&:after
+			position absolute
+			top 3.3px
+			left 2px
+			display block
+			width 50px
+			height 2px
+			content ''
+			background-image linear-gradient(to right, rgba(colors('white', .6)), rgba(colors('white'), 0))
+		&_1
+			animation move-along 9s 0ms infinite normal ease-in-out
+			offset-path path('M 1344,335 L 1768, 90 z')
+			// offset-distance 50%
+		&_2
+			animation move-along 10s 0ms infinite normal ease-in-out
+			offset-path path('M 791, 30 L 1111,216 z')
+			// offset-distance 50%
+		&_3
+			animation move-along 6s 0ms infinite normal ease-in-out
+			offset-path path('M 1361,361 L 1531, 458 z')
+			// offset-distance 50%
+		&_4
+			animation move-along 8s 0ms infinite normal ease-in-out
+			offset-path path('M 1053,568 L 659, 797 z')
+			// offset-distance 50%
+
+@keyframes move-along
+	100%
+		offset-distance 100%
+
+@supports (-ms-ime-align:auto)
+	.main-img__elipse
+		&_1
+			top 195px
+			left 1572px
+			transform rotate(-20deg)
+		&:after
+			content none
+

@@ -1,0 +1,103 @@
+.contact-form
+	padding 77px 77px 34px
+	display flex
+	background-image url(../images/bg-form.png)
+	background-position center bottom
+	background-size cover
+	flex-wrap wrap
+	col()
+	size(12)
+	+media-breakpoint-down('lg')
+		padding 60px 50px 34px
+	+media-breakpoint-down('md')
+		padding 40px 25px 30px
+	+media-breakpoint-down('xs')
+		padding 20px 5px
+
+	&__form-btn
+		padding 0 15px
+
+	&__btn-sub
+		margin-top 30px
+		border none
+		&.button
+			+media-breakpoint-down('xs')
+				width 100%
+				max-width 100%
+
+.form-input
+	col()
+	size(12)
+	size-md(4)
+	+media-breakpoint-down('md')
+		font-size px2rem(16px)
+	&:nth-child(-n+2)
+		+media-breakpoint-down('sm')
+			margin-bottom 30px
+		+media-breakpoint-down('xs')
+			margin-bottom 20px
+	&__item
+		padding 0 30px
+		width 100%
+		height 56px
+		color inherit
+		background-color transparent
+		border 1px solid currentColor
+		+media-breakpoint-down('xs')
+			padding 0 20px
+		&::placeholder
+			color currentColor
+			opacity 1
+		&.error
+			border-color colors('error')
+
+	&_textarea
+		margin-top 30px
+		+media-breakpoint-down('xs')
+			margin-top 20px
+		size(12)
+		& ^[0]__item
+			padding 16px 30px
+			height 112px
+			+media-breakpoint-down('xs')
+				padding 16px 20px
+
+.form-agree
+	margin-top 26px
+	display block
+	cursor pointer
+	&__txt
+		padding-left 26px
+		font-size px2rem(16px)
+		line-height px2rem(24px)
+		+media-breakpoint-down('xs')
+			font-size px2rem(14px)
+			line-height px2rem(20px)
+		&:before
+		&:after
+			position absolute
+			content ''
+			background-color colors('white')
+			transition background-color $t-time
+		&:before
+			top 5px
+			left 0
+			width 12px
+			height 12px
+			border-radius 4px
+			+media-breakpoint-down('xs')
+				top 3px
+		&:after
+			top 8px
+			left 3px
+			width 6px
+			height 6px
+			border-radius 2px
+			transition backgroudn-color $t-time
+			+media-breakpoint-down('xs')
+				top 6px
+
+	&__check:checked ~ ^[0]__txt:after
+		background-color currentColor
+	&__check.error ~ ^[0]__txt:before
+		background-color colors('red')

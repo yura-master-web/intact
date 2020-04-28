@@ -1,0 +1,15 @@
+mixin modal()
+	+b.modal.remodal(
+		data-remodal-id="modal"
+		data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true, hashTracking: false"
+	)&attributes(attributes)
+		+b.container_modal
+			+b.modal-form.bg-accent.cl-white.bdrs.ovh.pos-rel.js-modal-form
+				+b.btn-close(data-remodal-action="close")
+				+e.good.js-modal-good
+					+e('p').title.fwb Спасибо за заявку
+					+e('p').sub-title Подзаголовок, если потребуется
+				+e.fail.js-modal-fail
+					+e('p').title.fwb Что то пошло не так
+					+e('p').sub-title Подзаголовок, если потребуется
+				+e.bg

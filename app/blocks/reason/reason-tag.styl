@@ -1,0 +1,121 @@
+.reason-tag
+	row-flex()
+	align-items center
+
+	&__desc-wrap
+		padding 41px 70px 40px 153px
+		background-repeat no-repeat
+		background-position 50px 50%
+		border 2px solid colors('border')
+		transition background-color $t-time, color $t-time, border-color $t-time
+
+		col()
+		size-xs(12)
+		size-sm(9)
+		size-md(10)
+		size-lg(9)
+		size-xl(6)
+		+media-breakpoint-down('sm')
+			padding 20px 20px 20px 80px
+			background-position 24px 50%
+		+media-breakpoint-down('xs')
+			padding 20px 20px 20px 70px
+			font-size px2rem(14px)
+			background-position 17px center
+			background-size 30px auto
+
+		&:hover
+			color colors('white')
+			background-color colors('accent')
+			border-color colors('accent')
+
+		&:before
+		&:after
+			position absolute
+			top 50%
+			pointer-events none
+			content ''
+		&:before
+			top 50%
+			left calc(100% + 2px)
+			width 100vw
+			height 2px
+			content ''
+			background-color colors('border')
+			transform translateY(-50%)
+			~/:nth-of-type(even) ^[0..2]
+				right calc(100% + 2px)
+				left auto
+
+			^[-1]:hover^[2..2] // @stylint ignore
+				background-color colors('accent')
+
+		&:after
+			left calc(100% + 100vw)
+			width 11px
+			height 11px
+			background-color colors('accent')
+			border-radius 50%
+			box-shadow 0 0 17px 3px rgba(colors('accent'), .6)
+			transform translateY(-50%)
+			transition left $t-time linear
+			~/:nth-of-type(even) ^[0..2]
+				right 100vw
+				left auto
+				transition right $t-time linear
+
+			^[-1]:hover^[2..2] // @stylint ignore
+				left calc(100% + 60px)
+			~/:nth-of-type(even) ^[-1]:hover^[2..2] // @stylint ignore
+				right calc(100% + 60px)
+
+		&_monik
+			background-image url(../images/monik.png)
+			+media-breakpoint-down('sm')
+				padding 20px 20px 20px 100px
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
+		&_comp
+			background-image url(../images/comp.png)
+			+media-breakpoint-up('md')
+				background-position 61px 50%
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
+		&_home
+			background-image url(../images/home.png)
+			+media-breakpoint-up('md')
+				background-position 56px 50%
+			+media-breakpoint-down('sm')
+				padding 20px 20px 20px 100px
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
+		&_lego
+			background-image url(../images/lego.png)
+			+media-breakpoint-up('md')
+				padding-right 80px
+			+media-breakpoint-down('sm')
+				padding 20px 20px 20px 100px
+			+media-breakpoint-down('xs')
+				padding 20px 20px 20px 70px
+
+	&:nth-of-type(even)
+		justify-content flex-end
+	&:nth-last-child(n+2)
+		margin-bottom 30px
+		+media-breakpoint-down('xs')
+			margin-bottom 20px
+
+
+	&__num
+		align-items center
+		col()
+		size-xs(0)
+		size-sm(2)
+		size-md(2)
+		size-lg(2)
+		size-xl(1)
+		+media-breakpoint-down('xs')
+			display none
+
+	&__desc
+		line-height px2rem(30px)

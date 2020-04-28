@@ -1,0 +1,114 @@
+.stages-cards
+	col()
+	size(12)
+
+.stages-card-item
+	align-items center
+	&__num
+		col()
+		size-md(0)
+		size-lg(1.4)
+		size-xl(1)
+		+media-breakpoint-down('md')
+			display none
+		&:last-child
+			text-align right
+
+	&__wrap-des
+		padding 52px 45px 50px 152px
+		background-repeat no-repeat
+		background-position 48px 57px
+		col()
+		size(12)
+		size-md(6)
+		size-lg(4.6)
+		size-xl(5)
+		flex-grow 1
+		align-self stretch
+
+		+media-breakpoint-only('lg')
+			padding 50px 40px 30px
+			background-position right 30px top 30px
+		+media-breakpoint-down('md')
+			padding 25px 30px
+			background-position 28px 26px
+			background-size 30px auto
+		+media-breakpoint-down('xs')
+			padding 25px 20px 20px
+			background-position 20px 20px
+
+		&:nth-of-type(odd)
+			+media-breakpoint-up('md')
+				margin-right 0
+		&:nth-of-type(even)
+			+media-breakpoint-up('md')
+				margin-left 0
+
+
+		~/:first-child &
+			&_ser
+			&_lap
+				border-top 2px solid colors('border')
+				+media-breakpoint-up('md')
+					border-bottom 2px solid colors('border')
+			&_ser
+				border-left 2px solid colors('border')
+				border-right 2px solid colors('border')
+			&_lap
+				border-right 2px solid colors('border')
+				+media-breakpoint-down('sm')
+					border-left 2px solid colors('border')
+					border-bottom 2px solid colors('border')
+
+		~/:last-child &
+			&_mon
+			&_clo
+				border-bottom 2px solid colors('border')
+			&_mon
+				border-left 2px solid colors('border')
+				border-right 2px solid colors('border')
+			&_clo
+				border-right 2px solid colors('border')
+				+media-breakpoint-down('sm')
+					border-left 2px solid colors('border')
+
+		&_ser
+			background-image url(../images/st-comp.png)
+			border-radius 4px 0 0 0
+			+media-breakpoint-up('xl')
+				background-position 58px 57px
+			+media-breakpoint-only('lg')
+				background-position right 40px top 30px
+			+media-breakpoint-down('md')
+				background-position 30px 20px
+			+media-breakpoint-down('sm')
+				border-radius 4px 4px 0 0
+			+media-breakpoint-down('xs')
+				background-position 20px 16px
+		&_lap
+			background-image url(../images/st-laptop.png)
+			+media-breakpoint-up('md')
+				border-radius 0 4px 0 0
+		&_mon
+			padding-right 54px
+			background-image url(../images/st-mon.png)
+			+media-breakpoint-up('md')
+				border-radius 0 0 0 4px
+		&_clo
+			padding-right 48px
+			background-image url(../images/st-cloud.png)
+			border-radius 0 0 4px 0
+			+media-breakpoint-down('sm')
+				border-radius 0 0 4px 4px
+
+	&__title
+		margin-bottom 17px
+		+media-breakpoint-down('md')
+			margin-left 50px
+
+	&__txt
+		font-size px2rem(16px)
+		line-height px2rem(30px)
+		+media-breakpoint-down('xs')
+			font-size px2rem(14px)
+			line-height px2rem(24px)

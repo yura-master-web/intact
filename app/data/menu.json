@@ -1,0 +1,22 @@
+[
+	{
+		"name": "преимущества",
+		"url": "#reason"
+	},
+	{
+		"name": "стоимость",
+		"url": "#cost"
+	},
+	{
+		"name": "ограничения",
+		"url": "#limitations"
+	},
+	{
+		"name": "функции",
+		"url": "#functions"
+	},
+	{
+		"name": "об Intact",
+		"url": "#integrator"
+	}
+]

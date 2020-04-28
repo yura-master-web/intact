@@ -1,0 +1,15 @@
+mixin trust-us()
+	+b.trust-us.row.justify-center&attributes(attributes)
+		+e('h2').title.block-title_trast-us Нам доверяют
+
+		+b('p').block-title-sub_trust-us Мы работаем с крупнейшими международными производителями оборудования и программного обеспечения:
+
+	.row
+		+b.slider
+			+b.slider-block.owl-carousel.js-slider
+				each img in getData('slider')
+					+b.slider-wr-img
+						+e.img(src="/assets/images/slider/#{img}")
+				each img in getData('slider')
+					+b.slider-wr-img
+						+e.img(src="/assets/images/slider/#{img}")

@@ -1,0 +1,77 @@
+.slider
+	col()
+	size(12)
+
+.slider-block
+	margin 0 -18px
+	width auto
+	.owl-stage
+		display flex
+	.owl-item
+		display flex
+		justify-content center
+		img
+			width auto
+	.owl-nav
+		display flex
+		justify-content center
+	.owl-prev
+		transform rotate(90deg)
+	.owl-next
+		transform rotate(-90deg)
+	.owl-stage-outer
+		margin-bottom 54px
+		+media-breakpoint-down('md')
+			margin-bottom 40px
+		+media-breakpoint-down('sm')
+			margin-bottom 30px
+	[type='button']
+		margin 0 25px
+
+	&:before
+	&:after
+		position absolute
+		z-index 20
+		top 0
+		bottom 0
+		width 15px
+		content ''
+		background-color colors('white')
+	&:before
+		left 0
+	&:after
+		right 0
+
+.slider-wr-img
+	display flex
+	overflow hidden
+	width 160px
+	height 100px
+	border 2px solid colors('border')
+	border-radius 4px
+	transition border-color $t-time, filter $t-time
+	justify-content center
+	align-items center
+	+media-breakpoint-down('md')
+		width 140px
+		height 80px
+	&:hover
+		border-color colors('accent')
+
+	&__img
+		transition filter $t-time
+		+media-breakpoint-up('lg')
+			filter grayscale(100%)
+			~/:hover &
+				filter grayscale(0)
+
+.slider-arrow
+	width 18px
+	height 25px
+	transition stroke $t-time
+	fill none
+	stroke colors('text')
+	stroke-miterlimit 10
+	stroke-width 2px
+	&:hover
+		stroke colors('accent')

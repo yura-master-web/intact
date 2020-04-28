@@ -2,7 +2,7 @@
 	"disallowClassLiteralsBeforeIdLiterals": true,
 	"disallowDuplicateAttributes": true,
 	"disallowMultipleLineBreaks": true,
-	"requireClassLiteralsBeforeAttributes": true,
+	// "requireClassLiteralsBeforeAttributes": true,
 	"requireIdLiteralsBeforeAttributes": true,
 	"requireLowerCaseAttributes": true,
 	"requireLowerCaseTags": true,
