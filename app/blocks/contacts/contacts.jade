@@ -6,14 +6,14 @@ mixin contacts()
 
 		+b('form').contact-form.bdrs.justify-center.cl-form.js-contact-form
 
-			+b('label').form-input
+			+b('label').form-input_input
 				+e('input').item.bdrs(
 					name="name"
 					placeholder="Ваше имя"
 					required
 				)
 
-			+b('label').form-input
+			+b('label').form-input_input
 				+e('input').item.bdrs(
 					type="email"
 					name="email"
@@ -21,7 +21,7 @@ mixin contacts()
 					required
 				)
 
-			+b('label').form-input
+			+b('label').form-input_input
 				+e('input').item.bdrs(
 					name="phone"
 					placeholder="Номер телефона"
