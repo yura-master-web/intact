@@ -121,22 +121,24 @@
 	min-height 95px
 	flex 1 1 auto
 	+media-breakpoint-down('xl')
-		min-height 70px
+		min-height 30px
 	+media-breakpoint-down('md')
 		min-height 40px
 	+media-breakpoint-down('sm')
 		min-height 25px
 		max-height 25px
+	+media-breakpoint-down('xs')
+		min-height 45px
 	&_top
 		+media-breakpoint-down('xs')
-			min-height 50px
+			min-height 65px
 
 .header-content
 	z-index 2
 	col()
-	size-xl(6)
-	size-md(8)
 	size(12)
+	size-md(8)
+	size-xl(6)
 	+media-breakpoint-down('sm')
 		display flex
 		font-size px2rem(16px)
@@ -153,6 +155,9 @@
 		font-size $font-size-h1
 		font-weight bold
 		line-height px2rem(90px)
+		// +media-breakpoint-only('xl')
+		// 	font-size 3.6vw
+		// 	line-height 4.8vw
 		+media-breakpoint-down('lg')
 			margin-bottom 40px
 			font-size px2rem(55px)
@@ -173,7 +178,7 @@
 			line-height px2rem(35px)
 	&__desc
 		margin-bottom 70px
-		padding-right 300px
+		padding-right 90px
 		font-size px2rem(16px)
 		line-height px2rem(36px)
 		+media-breakpoint-down('lg')
@@ -196,21 +201,6 @@
 .header-img
 	position relative
 	col()
-	size-xl(6)
-	size-md(4)
 	size(12)
-
-.main-block-arrow
-	position absolute
-	bottom 52px
-	cursor pointer
-	transition stroke $t-time
-	svgSize(17px 58px)
-	fill none
-	stroke colors('white')
-	stroke-miterlimit 10
-	stroke-width 2px
-	&:hover
-		stroke colors('form')
-	+media-breakpoint-down('sm')
-		display none
+	size-md(4)
+	size-xl(6)

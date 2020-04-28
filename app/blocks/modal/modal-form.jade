@@ -1,0 +1,7 @@
+mixin modal-form()
+	+b.modal-form-call.remodal(
+		data-remodal-id="modal-form"
+		data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true, hashTracking: false"
+	)&attributes(attributes)
+		+b.container_form
+			+b.modal-form.bg-accent.cl-white.bdrs.ovh.pos-rel.js-modal-form

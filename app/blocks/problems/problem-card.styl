@@ -97,8 +97,12 @@
 	&_sec
 		z-index 3
 		background-image url(../images/lock.png)
+	&&_sec
 		+media-breakpoint-down('sm')
 			margin-bottom 0
+			&:after
+			&:before
+				content none
 
 	&__title
 		margin-bottom 17px
