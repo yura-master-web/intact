@@ -26,9 +26,10 @@
 				max-width 100%
 
 .form-input
-	col()
-	size(12)
-	size-md(4)
+	&_input
+		col()
+		size(12)
+		size-md(4)
 	+media-breakpoint-down('md')
 		font-size px2rem(16px)
 	&:nth-child(-n+2)
