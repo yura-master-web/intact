@@ -6,26 +6,55 @@
 		margin-right 15px
 		padding 59px 27px 68px 47px
 		col()
-		size(6)
+		size(12)
+		size-lg(6)
+		+media-breakpoint-down('lg')
+			padding 50px 25px
+		+media-breakpoint-down('md')
+			padding 25px
+		+media-breakpoint-down('xs')
+			padding 20px
 	&__d-txt
 		line-height px2rem(34px)
+		+media-breakpoint-down('xs')
+			font-size px2rem(14px)
+			line-height px2rem(22px)
 		&:nth-last-child(n+2)
 			margin-bottom 39px
+			+media-breakpoint-down('sm')
+				margin-bottom 30px
+			+media-breakpoint-down('xs')
+				margin-bottom 20px
 	&__img
 		padding 0 100px
 		display flex
 		flex-direction column
 		background-image url(../images/integ-img.jpg)
+		background-position center center
+		background-size cover
 		justify-content center
 		align-items center
+
 		col()
-		size(6)
+		size(12)
+		size-lg(6)
+		+media-breakpoint-down('md')
+			padding 100px 200px
+			border-top 2px solid colors('border')
+		+media-breakpoint-down('sm')
+			padding 80px 100px
+		+media-breakpoint-down('xs')
+			padding 25px 20px
 	&__i-txt
 	&__i-name
 		font-size px2rem(24px)
 		line-height px2rem(40px)
+		+media-breakpoint-down('xs')
+			font-size px2rem(18px)
+			line-height px2rem(26px)
 	&__i-txt
 		margin-top 39px
 		margin-bottom 19px
+		width 100%
 	&__i-name
 		align-self flex-end
