@@ -20,7 +20,7 @@ $('.js-contact-form').validate({
 
 		$.post('index.php', $('.js-contact-form').serialize())
 			.done(() => {
-				console.log('success');
+				// console.log('success');
 
 				$('[data-remodal-id="modal"]').each((i, el) => {
 					// покажем положительный результат
@@ -36,7 +36,7 @@ $('.js-contact-form').validate({
 				});
 			})
 			.fail(() => {
-				console.log('fail');
+				console.warn('fail');
 
 				$('[data-remodal-id="modal"]').each((i, el) => {
 					// покажем провал запроса
