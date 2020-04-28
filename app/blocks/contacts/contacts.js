@@ -20,56 +20,36 @@ $('.js-contact-form').validate({
 
 		$.post('index.php', $('.js-contact-form').serialize())
 			.done(() => {
-				console.log('send');
+				console.log('success');
+
+				$('[data-remodal-id="modal"]').each((i, el) => {
+					// покажем положительный результат
+					const $modal = $(el);
+					const $blockGood = $modal.find('.js-modal-good');
+					const $blockFail = $modal.find('.js-modal-fail');
+					$blockGood.show();
+					$blockFail.hide();
+
+					// открываем модальное окно
+					const instModal = $(el).remodal();
+					instModal.open();
+				});
 			})
 			.fail(() => {
 				console.log('fail');
+
+				$('[data-remodal-id="modal"]').each((i, el) => {
+					// покажем провал запроса
+					const $modal = $(el);
+					const $blockGood = $modal.find('.js-modal-good');
+					const $blockFail = $modal.find('.js-modal-fail');
+					$blockGood.hide();
+					$blockFail.show();
+
+					// открываем модальное окно
+					const instModal = $(el).remodal();
+					instModal.open();
+				});
 			});
 	}
 });
-
-// const formData = new FormData();
-// const fields = $('.js-contact-form').find('.js-contact-form-field');
-// fields.each((i, el) =>
-// 	formData.append($(el).attr('name'), $(el).val())
-// );
-
-/*
-function send(e) {
-	e.preventDefault();
-	$(e.currentTarget).trigger('disabled');
-
-	$('.modal-sign-in .error-block').html('');
-
-	const formData = new FormData();
-
-	formData.append('send_authorisation_form', true);
-	formData.append('login', $('.js-auth-login').val());
-	formData.append('password', $('.js-auth-password').val());
-	formData.append(
-		'remember',
-		$('.js-public-login-remember').is(':checked') ? 'Y' : 'N'
-	);
-	formData.append('redirect', $('input[name=auth-redirect]').val());
-
-	// axios
-	//     .post('/public-ajax/auth/', formData)
-	//     .then(function(response) {
-	//         if (response.data.success) {
-	//             if (typeof response.data.redirect !== 'undefined') {
-	//                 window.location.href = response.data.redirect;
-	//             }
-	//         } else if (response.data.error) {
-	//             if (response.data.messages) {
-	//                 $('.modal-sign-in .error-block').html(response.data.messages);
-	//                 $(e.currentTarget).trigger('enabled', send);
-	//             }
-	//         }
-	//     })
-	//     .catch(function(error) {
-	//         console.warn(error);
-	//     });
-}
-
-$('.jd-btn-form-submit').on('click', send);
-*/
