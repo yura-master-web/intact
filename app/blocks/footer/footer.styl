@@ -2,6 +2,17 @@
 	margin-top 140px
 	padding 40px 0
 	border-top 2px solid colors('border')
+	+media-breakpoint-down('lg')
+		margin-top 95px
+	+media-breakpoint-down('md')
+		margin-top 75px
+		padding 30px 0
+	+media-breakpoint-down('sm')
+		margin-top 62px
+	+media-breakpoint-down('xs')
+		margin-top 30px
+		padding 20px 0
+
 	.row
 		justify-content space-between
 
@@ -9,18 +20,36 @@
 	display flex
 	align-items center
 	col()
-	size(6)
+	size(12)
+	size-md(5)
+	size-lg(6)
+	+media-breakpoint-down('sm')
+		margin-bottom 20px
+	+media-breakpoint-down('xs')
+		justify-content space-between
 	&__data
 		margin-left 100px
 		font-size px2rem(14px)
 		line-height px2rem(24px)
+		+media-breakpoint-down('md')
+			margin-left 60px
 
 .footer-phone
 	display flex
 	align-items center
 	col()
-	size(6)
-	justify-content flex-end
+	size(12)
+	size-md(7)
+	size-lg(6)
+	+media-breakpoint-up('md')
+		justify-content flex-end
+	+media-breakpoint-down('xs')
+		justify-content space-between
 
 .footer-number
 	margin-left 40px
+	white-space nowrap
+	+media-breakpoint-down('md')
+		margin-left 20px
+	+media-breakpoint-down('xs')
+		font-size px2rem(12px)
