@@ -21,6 +21,10 @@
 		transform rotate(-90deg)
 	.owl-stage-outer
 		margin-bottom 54px
+		+media-breakpoint-down('md')
+			margin-bottom 40px
+		+media-breakpoint-down('sm')
+			margin-bottom 30px
 	[type='button']
 		margin 0 25px
 
@@ -48,14 +52,18 @@
 	transition border-color $t-time, filter $t-time
 	justify-content center
 	align-items center
+	+media-breakpoint-down('md')
+		width 140px
+		height 80px
 	&:hover
 		border-color colors('accent')
 
 	&__img
 		transition filter $t-time
-		filter grayscale(100%)
-		~/:hover &
-			filter grayscale(0)
+		+media-breakpoint-up('lg')
+			filter grayscale(100%)
+			~/:hover &
+				filter grayscale(0)
 
 .slider-arrow
 	width 18px

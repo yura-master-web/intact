@@ -46,6 +46,10 @@ html
 			margin-bottom 95px
 	&_trast-us
 		margin-bottom 34px
+		+media-breakpoint-down('md')
+			margin-bottom 25px
+		+media-breakpoint-down('xs')
+			margin-bottom 20px
 
 .block-title-sub
 	margin-bottom 68px
@@ -53,8 +57,20 @@ html
 	line-height px2rem(40px)
 	text-align center
 	col()
+	+media-breakpoint-down('lg')
+		margin-bottom 40px
+	+media-breakpoint-down('md')
+		margin-bottom 35px
+		font-size px2rem(20px)
+		line-height px2rem(30px)
+	+media-breakpoint-down('sm')
+		margin-bottom 30px
+		font-size px2rem(18px)
+		line-height px2rem(24px)
 	&_trust-us
-		size(8)
+		size(12)
+		size-lg(9.5)
+		size-xl(8)
 	&_integrator
 		margin-bottom 66px
 		size(8)
