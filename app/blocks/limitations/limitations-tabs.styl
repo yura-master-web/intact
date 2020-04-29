@@ -56,10 +56,13 @@
 		+media-breakpoint-down('md')
 			padding-left 30px
 		+media-breakpoint-down('sm')
+			margin-bottom 20px
 			max-width 100%
 			flex 1 1 100%
 			&:nth-last-child(n+3)
 				margin-bottom 20px
+			&:last-child
+				margin-bottom 0
 		+media-breakpoint-down('xs')
 			margin-bottom 15px
 			padding-left 10px
@@ -76,7 +79,9 @@
 			color colors('accent')
 			+media-breakpoint-down('md')
 				left 10px
+			+media-breakpoint-down('sm')
+				top 49%
+				line-height 0
 			+media-breakpoint-down('xs')
 				top 47%
 				left -3px
-				line-height 0
