@@ -10,10 +10,10 @@ $('.js-finctions-tabs').each((i, el) => {
 		if (!target.hasClass('is-active')) {
 			$tabItem.removeClass('is-active');
 			target.addClass('is-active');
-			// $contItem.fadeOut(300);
-			$contItem.hide(300);
+			$contItem.fadeOut(200);
+			// $contItem.hide(300);
 			// prettier-ignore
-			$contItem.filter((ind, elem) => id === $(elem).data('con-id')).delay(300).fadeIn(300);
+			$contItem.filter((ind, elem) => id === $(elem).data('con-id')).delay(200).fadeIn(200);
 		}
 	});
 });

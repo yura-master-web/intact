@@ -13,6 +13,8 @@ include /blocks/integrator/integrator
 include /blocks/contacts/contacts
 include /blocks/footer/footer
 include /blocks/modal/modal
+include /blocks/modal/modal-form
+include /blocks/contact-form/contact-form
 
 block head
 	- var pageTitle = 'Intact';
@@ -47,3 +49,4 @@ block content
 			+contacts#contacts.block-indent
 		+footer
 		+modal
+		+modal-form

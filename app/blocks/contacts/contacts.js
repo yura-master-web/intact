@@ -6,7 +6,9 @@ $.extend($.validator.messages, {
 	email: ''
 });
 
-$('.js-contact-form').validate({
+let btnSubmit = null;
+
+const settingsValidation = {
 	rules: {
 		phone: {
 			minlength: 17
@@ -16,12 +18,11 @@ $('.js-contact-form').validate({
 		}
 	},
 	submitHandler() {
-		console.log('submit');
+		btnSubmit = $(this.submitButton);
+		btnSubmit.attr('disabled', 'disabled');
 
-		$.post('index.php', $('.js-contact-form').serialize())
+		$.post('index.php', $(this.currentForm).serialize())
 			.done(() => {
-				// console.log('success');
-
 				$('[data-remodal-id="modal"]').each((i, el) => {
 					// покажем положительный результат
 					const $modal = $(el);
@@ -33,6 +34,7 @@ $('.js-contact-form').validate({
 					// открываем модальное окно
 					const instModal = $(el).remodal();
 					instModal.open();
+					btnSubmit.removeAttr('disabled');
 				});
 			})
 			.fail(() => {
@@ -49,7 +51,11 @@ $('.js-contact-form').validate({
 					// открываем модальное окно
 					const instModal = $(el).remodal();
 					instModal.open();
+					btnSubmit.removeAttr('disabled');
 				});
 			});
 	}
-});
+};
+
+$('.js-contact-form').validate(settingsValidation);
+$('.js-callback-form').validate(settingsValidation);

@@ -3,10 +3,10 @@
 	size(12)
 	size-lg(10)
 	&__content
-		padding 70px 22px 31px
+		padding 70px 22px
 		border 2px solid colors('border')
 		+media-breakpoint-down('md')
-			padding 50px 20px 20px
+			padding 50px 20px
 		+media-breakpoint-down('xs')
 			padding 30px 20px 30px 15px
 
@@ -47,17 +47,19 @@
 
 	&__thesis
 		position relative
-		margin-bottom 39px
 		padding-left 77px
 		max-width 50%
 		line-height px2rem(30px)
 		flex 1 1 50%
+		&:nth-last-child(n+3)
+			margin-bottom 39px
 		+media-breakpoint-down('md')
 			padding-left 30px
 		+media-breakpoint-down('sm')
-			margin-bottom 20px
 			max-width 100%
 			flex 1 1 100%
+			&:nth-last-child(n+3)
+				margin-bottom 20px
 		+media-breakpoint-down('xs')
 			margin-bottom 15px
 			padding-left 10px

@@ -1,0 +1,55 @@
+.remodal
+	.container
+		&_form
+			pointer-events all
+
+.modal-form-call
+	padding 65px 0 0
+	display flex
+	overflow hidden
+	flex-direction column
+	background-image url(../images/bg-modal-form.png)
+	background-size cover
+	border-radius 4px
+	align-items center
+	col()
+	size(12)
+	+media-breakpoint-down('md')
+		padding-top 40px
+	+media-breakpoint-down('xs')
+		padding-top 30px
+
+	&__title
+		margin-bottom 12px
+
+
+	&__sub-title
+		margin-bottom 48px
+		font-weight 400
+		col()
+		size(12)
+		size-lg(10)
+		+media-breakpoint-up('lg')
+			line-height px2rem(40px)
+		+media-breakpoint-down('md')
+			font-size px2rem(20px)
+		+media-breakpoint-down('sm')
+			margin-bottom 30px
+			font-size px2rem(16px)
+			line-height px2rem(24px)
+
+	&__title
+	&__sub-title
+		padding 0 77px
+		+media-breakpoint-down('lg')
+			padding 0 50px
+		+media-breakpoint-down('md')
+			padding 0 25px
+		+media-breakpoint-down('xs')
+			padding 0 5px
+
+// .sub-title-modal-form
+// 	text-align center
+// 	col()
+// 	size(12)
+// 	size-xl(7)

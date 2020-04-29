@@ -23,8 +23,8 @@
 .wrap-menu-mob
 	height 100%
 	col()
-	size-sm(8)
 	size(12)
+	size-sm(8)
 	&:after
 		position absolute
 		top 0
@@ -32,14 +32,14 @@
 		bottom 0
 		width 100%
 		content ''
-		background-color colors('white')
+		background-color colors('accent')
 	&:before
 		position absolute
 		top 0
 		bottom 0
 		width 100%
 		content none
-		background-color colors('white')
+		background-color colors('accent')
 		+media-breakpoint-down('xs')
 			left -15px
 			content ''
@@ -52,10 +52,12 @@
 	bottom 0
 	overflow-x hidden
 	overflow-y auto
-	background-color colors('white')
+	background-color colors('accent')
 
 	&__item
 		margin-top 20px
 		text-align right
 		&:last-child
 			margin-bottom 30px
+		+media-breakpoint-down('xs')
+			text-align center

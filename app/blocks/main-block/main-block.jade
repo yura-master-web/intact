@@ -8,7 +8,7 @@ mixin main-block()
 				each item in getData('menu')
 					+e('a').item.tdn.upcs(href="#{item.url}") #{item.name}
 
-				+e('a').item.btn-phone_menu.tdn.upcs.bdrs(href="#contacts") Вам перезвонить?
+				+e('a').item.btn-phone_menu.tdn.upcs.bdrs(data-remodal-target="modal-form" href="javascript:;") Вам перезвонить?
 
 			+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
 
@@ -23,7 +23,7 @@ mixin main-block()
 							each item in getData('menu')
 								+e('a').item.tdn.upcs(href="#{item.url}") #{item.name}
 						+b.tl-tablet-phones
-							+e('a').item.btn-phone_menu.tdn.upcs.bdrs.cl-form(href="#contacts") Вам перезвонить?
+							+e('a').item.btn-phone_menu.tdn.upcs.bdrs.cl-form(data-remodal-target="modal-form" href="javascript:;") Вам перезвонить?
 							+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
 
 		+b.top-line-mobile.tl-border
@@ -31,7 +31,7 @@ mixin main-block()
 				+e.logo
 					img(src="/assets/images/intact_logo-white-mob.png")
 				+b.phones-mob-line
-					+e('a').item.btn-phone_menu.tdn.upcs.bdrs.cl-form(href="#contacts") Вам перезвонить?
+					+e('a').item.btn-phone_menu.tdn.upcs.bdrs.cl-form(data-remodal-target="modal-form" href="javascript:;") Вам перезвонить?
 					+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
 				+b.burger-menu.pos-rel.js-btn-mobile-menu
 					+e.line.bg-white
@@ -59,10 +59,10 @@ mixin main-block()
 
 		.container.menu-mobile
 			.row
-				+b.wrap-menu-mob.pos-rel
+				+b.wrap-menu-mob.pos-rel.js-wrap-menu-mobile
 					+b('ul').menu-mobile-list
 						each item in getData('menu')
 							+e('li').item
-								+e('a').link.tdn.upcs.js-mob-menu-item(href="#{item.url}") #{item.name}
+								+e('a').link.cl-white.tdn.upcs.js-mob-menu-item(href="#{item.url}") #{item.name}
 						+e('li').item
-							+e('a').phone.tdn.upcs.phone-number(href="tel:+74959894049") +7 495 989 40 49
+							+e('a').phone.cl-white.tdn.upcs.phone-number(href="tel:+74959894049") +7 495 989 40 49
