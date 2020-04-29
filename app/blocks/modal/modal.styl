@@ -108,6 +108,15 @@
 		+media-breakpoint-down('xs')
 			top 18px
 			right 33px
+	&_modal-privacy-policy
+		top 40px
+		right 40px
+		+media-breakpoint-down('md')
+			top 30px
+			right 30px
+		+media-breakpoint-down('sm')
+			top 20px
+			right 20px
 	&:hover
 		transform rotate(-45deg) scale(1.2)
 	&:before
@@ -115,6 +124,8 @@
 		position absolute
 		content ''
 		background-color colors('white')
+		~/_modal-privacy-policy&
+			background-color colors('text')
 	&:before
 		top 0
 		left 50%
