@@ -21,35 +21,70 @@
 	align-items center
 	col()
 	size(12)
-	size-md(5)
-	size-lg(6)
+	size-md(4)
+	size-lg(4)
+	size-xl(5)
 	+media-breakpoint-down('sm')
 		margin-bottom 20px
-	+media-breakpoint-down('xs')
 		justify-content space-between
 	&__data
 		margin-left 100px
 		font-size px2rem(14px)
 		line-height px2rem(24px)
 		+media-breakpoint-down('md')
-			margin-left 60px
+			margin-left 20px
+		+media-breakpoint-down('xs')
+			p
+				white-space nowrap
 
 .footer-phone
 	display flex
 	align-items center
 	col()
 	size(12)
-	size-md(7)
-	size-lg(6)
+	size-md(8)
+	size-lg(8)
+	size-xl(7)
 	+media-breakpoint-up('md')
 		justify-content flex-end
-	+media-breakpoint-down('xs')
+	+media-breakpoint-down('sm')
 		justify-content space-between
 
 .footer-number
 	margin-left 40px
 	white-space nowrap
 	+media-breakpoint-down('md')
-		margin-left 20px
+		margin-left 12px
 	+media-breakpoint-down('xs')
 		font-size px2rem(12px)
+	+media-breakpoint-only('md')
+		&.phone-number
+			letter-spacing 0
+
+.keyba-log
+	margin-left auto
+	+media-breakpoint-down('lg')
+		margin-left 40px
+	+media-breakpoint-down('md')
+		margin-left 12px
+	&:after
+		position absolute
+		top 0
+		right 0
+		left 0
+		bottom 0
+		pointer-events none
+		content ''
+		background-color colors('white')
+		opacity 0
+		transition opacity $t-time
+
+		~/:hover&
+			opacity .3
+	&_first
+		+media-breakpoint-up('md')
+			display none
+
+	&_last
+		+media-breakpoint-down('sm')
+			display none

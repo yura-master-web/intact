@@ -38,10 +38,14 @@ body
 		padding-top 15px
 		padding-bottom 0
 
-	&_min
+	&&_min
 		+media-breakpoint-up('xl')
 			margin-top 83px
-			padding-bottom 32px
+			padding-bottom 0
+		+media-breakpoint-down('lg')
+			padding-bottom 0
+		+media-breakpoint-down('xs')
+			margin-bottom 0
 
 .justify-center
 	justify-content center
