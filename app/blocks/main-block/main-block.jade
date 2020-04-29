@@ -2,7 +2,7 @@ mixin main-block()
 	+b.main-block.bg-accent&attributes(attributes)
 		+b.top-line.tl-border
 			+e.logo
-				img(src="/assets/images/intact_logo-white.png")
+				img(src="/assets/images/intact_logo-white.png" alt="intact логотип")
 
 			+b.menu.cl-form
 				each item in getData('menu')
@@ -16,7 +16,7 @@ mixin main-block()
 			.container
 				.row
 					+e.logo
-						img(src="/assets/images/intact_logo-white.png")
+						img(src="/assets/images/intact_logo-white.png" alt="intact логотип")
 
 					+e.wrap-menu-phone
 						+b.menu.tl-tablet-menu.cl-form
@@ -29,7 +29,7 @@ mixin main-block()
 		+b.top-line-mobile.tl-border
 			.container
 				+e.logo
-					img(src="/assets/images/intact_logo-white-mob.png")
+					img(src="/assets/images/intact_logo-white-mob.png" alt="intact логотип")
 				+b.phones-mob-line
 					+e('a').item.btn-phone_menu.tdn.upcs.bdrs.cl-form(data-remodal-target="modal-form" href="javascript:;") Вам перезвонить?
 					+e('a').phone.tdn.upcs.phone-number.cl-white(href="tel:+74959894049") +7 495 989 40 49
