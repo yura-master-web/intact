@@ -1,0 +1,45 @@
+.modal-privacy-policy
+	padding 50px 70px
+	display flex
+	flex-direction column
+	text-align left
+
+	col()
+	size(12)
+	+media-breakpoint-down('md')
+		padding 45px 50px
+	+media-breakpoint-down('sm')
+		padding 30px 40px
+	+media-breakpoint-down('xs')
+		padding 20px 15px
+	&__title
+		margin-bottom 50px
+		font-size px2rem(50px)
+		line-height px2rem(70px)
+		align-self center
+		+media-breakpoint-down('md')
+			font-size px2rem(40px)
+			line-height px2rem(50px)
+		+media-breakpoint-down('sm')
+			margin-bottom 40px
+			font-size px2rem(28px)
+			line-height px2rem(38px)
+		+media-breakpoint-down('xs')
+			margin-bottom 30px
+			padding 0
+			max-width 250px
+			font-size px2rem(22px)
+			line-height px2rem(28px)
+
+	p:not(.block-title)
+	ul
+		margin-bottom 20px
+		font-size px2rem(18px)
+		line-height px2rem(26px)
+		+media-breakpoint-down('sm')
+			margin-bottom 15px
+			font-size px2rem(16px)
+			line-height px2rem(22px)
+		+media-breakpoint-down('xs')
+			font-size px2rem(14px)
+			line-height px2rem(20px)

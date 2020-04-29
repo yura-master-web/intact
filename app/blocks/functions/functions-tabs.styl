@@ -5,18 +5,18 @@
 
 	&__header
 		display flex
-		border-bottom 2px solid colors('border')
 
 	&__content
-		height 596px
+		height 644px
+		border-radius 0 0 4px 4px
 		+media-breakpoint-down('lg')
-			height 500px
+			height 550px
 		+media-breakpoint-down('md')
-			height 350px
+			height 410px
 		+media-breakpoint-down('sm')
-			height 250px
+			height 300px
 		+media-breakpoint-down('xs')
-			height 180px
+			height 56vw
 
 .functions-tabs-item
 	display flex
@@ -43,6 +43,10 @@
 			padding-right 20px
 		+media-breakpoint-down('xs')
 			padding-right 0
+	&:first-child
+		border-radius 4px 0 0 0
+	&:last-child
+		border-radius 0 4px 0 0
 
 	&:hover
 		color colors('white')
@@ -111,17 +115,17 @@
 .functions-content-item
 	display none
 	height 100%
+	background-repeat no-repeat
 	background-position center center
-	background-size cover
 	&_1
-		background-image url(../images/scr-1.jpg)
+		background-image url(../images/scr-n-1.png)
 	&_2
-		background-image url(../images/scr-2.jpg)
+		background-image url(../images/scr-n-2.png)
 	&_3
-		background-image url(../images/scr-3.jpg)
+		background-image url(../images/scr-n-3.png)
 	&_4
-		background-image url(../images/scr-4.jpg)
+		background-image url(../images/scr-n-4.png)
 	&_5
-		background-image url(../images/scr-1.jpg)
-	// &.is-active
-		// display block
+		background-image url(../images/scr-n-5.png)
+	+media-breakpoint-down('lg')
+		background-size 93%

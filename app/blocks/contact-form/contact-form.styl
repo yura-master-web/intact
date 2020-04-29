@@ -76,6 +76,19 @@
 	display block
 	cursor pointer
 	&__txt
+		font-size px2rem(16px)
+		line-height px2rem(24px)
+		text-align left
+		transition color $t-time
+		-webkit-text-underline-position under
+		-ms-text-underline-position below
+		text-underline-position under
+		+media-breakpoint-down('xs')
+			font-size px2rem(14px)
+			line-height px2rem(20px)
+		&:hover
+			color colors('white')
+	&__btn
 		padding-left 26px
 		font-size px2rem(16px)
 		line-height px2rem(24px)
@@ -90,24 +103,24 @@
 			background-color colors('white')
 			transition background-color $t-time
 		&:before
-			top 5px
+			top 6px
 			left 0
 			width 12px
 			height 12px
 			border-radius 4px
 			+media-breakpoint-down('xs')
-				top 3px
+				top 6px
 		&:after
-			top 8px
+			top 9px
 			left 3px
 			width 6px
 			height 6px
 			border-radius 2px
 			transition backgroudn-color $t-time
 			+media-breakpoint-down('xs')
-				top 6px
+				top 9px
 
-	&__check:checked ~ ^[0]__txt:after
+	&__check:checked ~ ^[0]__btn:after
 		background-color currentColor
-	&__check.error ~ ^[0]__txt:before
+	&__check.error ~ ^[0]__btn:before
 		background-color colors('red')

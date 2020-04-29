@@ -100,6 +100,8 @@
 
 	&:nth-of-type(even)
 		justify-content flex-end
+		& ^[0]__num
+			text-align right
 	&:nth-last-child(n+2)
 		margin-bottom 30px
 		+media-breakpoint-down('xs')

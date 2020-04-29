@@ -7,7 +7,7 @@ mixin modal-form()
 			.row
 				+b.modal-form-call
 					+b.btn-close_modal-form(data-remodal-action="close")
-					+e.title.block-title.cl-white Обратная связь
-					+e.sub-title.sub-title.cl-white Мы свяжемся с вами, проконсультируем по системе обмена файлами и ответим на ваши вопросы
+					+e('p').title.block-title.cl-white Обратная связь
+					+e('p').sub-title.sub-title.cl-white Мы свяжемся с вами, проконсультируем по системе обмена файлами и ответим на ваши вопросы
 					.row
 						+contact-form('', 'callback_form').js-callback-form

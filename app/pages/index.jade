@@ -14,10 +14,12 @@ include /blocks/contacts/contacts
 include /blocks/footer/footer
 include /blocks/modal/modal
 include /blocks/modal/modal-form
+include /blocks/modal/modal-privacy-policy
 include /blocks/contact-form/contact-form
 
 block head
-	- var pageTitle = 'Intact';
+	- var pageTitle = 'OwnCloud - Корпоративная система обмена файлами';
+	- var pageDescription = 'Решение OwnCloud позволяет развернуть собственную корпоративную систему обмена файлами. Это частное облако - безопасное и конфиденциальное.';
 
 block content
 	.remodal-bg.main-wrapper.cl-text
@@ -50,3 +52,4 @@ block content
 		+footer
 		+modal
 		+modal-form
+		+modal-privacy-policy
