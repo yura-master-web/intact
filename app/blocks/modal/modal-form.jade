@@ -1,7 +1,13 @@
 mixin modal-form()
-	+b.modal-form-call.remodal(
+	+b.remodal(
 		data-remodal-id="modal-form"
 		data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true, hashTracking: false"
 	)&attributes(attributes)
-		+b.container_form
-			+b.modal-form.bg-accent.cl-white.bdrs.ovh.pos-rel.js-modal-form
+		+b.container_form.pos-rel
+			.row
+				+b.modal-form-call
+					+b.btn-close_modal-form(data-remodal-action="close")
+					+e.title.block-title.cl-white Обратная связь
+					+e.sub-title.sub-title.cl-white Мы свяжемся с вами, проконсультируем по системе обмена файлами и ответим на ваши вопросы
+					.row
+						+contact-form('', 'callback_form').js-callback-form
