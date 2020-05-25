@@ -1,0 +1,65 @@
+mixin stages()
+	+b.stages.row.justify-center&attributes(attributes)
+		+e('h2').title.block-title Этапы внедрения
+
+	.row
+		+b.stages-cards.pos-rel
+			+b.stages-card-item.row
+				+e('p').num.txt-num 01
+				+e.wrap-des_ser
+					+e('h3').title.sub-title Аудит
+					+e('p').txt Предпроектное обследование и разработка технического задания.
+
+				+e.wrap-des_lap
+					+e('h3').title.sub-title Проектирование
+					+e('p').txt Разработка паспорта системы, программы и методики испытаний и эксплуатационной документации.
+				+e('p').num.txt-num 02
+
+			+b.stages-card-item.row
+				+e('p').num.txt-num 03
+				+e.wrap-des_mon
+					+e('h3').title.sub-title Внедрение
+					+e('p').txt Пуско-наладочные работы, включающие установку и базовые настройки.
+
+				+e.wrap-des_clo
+					+e('h3').title.sub-title Опытная эксплуатация
+					+e('p').txt Инструктаж по работе, испытания системы и последующее удаленное содействие
+				+e('p').num.txt-num 04
+
+		+b.result-implem
+			+e.wrap
+				+b.result-implem-item
+					+e('p').title.fwb Результаты внедрения
+					+e('p').thesiz
+						span.cl-accent →
+						| Установленная и работающая система
+					+e('p').thesiz
+						span.cl-accent →
+						| Документация описывающая систему
+					+e('p').thesiz
+						span.cl-accent →
+						| Инструкции по работе с системой
+					+e('p').thesiz
+						span.cl-accent →
+						| Поддержка производителя на 1 год
+
+				+b.result-implem-item
+					+e('p').title.fwb Стоимость
+					+e.cost
+						+e('p').cost-title Поддержка производителя
+						+e('p').cost-price.cl-accent.fwb
+							| 449 280 
+							span ₽ 
+							span.visuallyhidden руб.
+
+					+e.cost._last
+						+e('p').cost-title Выполнение работ
+						+e('p').cost-price.cl-accent.fwb
+							| 558 500 
+							span ₽ 
+							span.visuallyhidden руб.
+
+		+banner-leave-request('_stages')
+			| Впечатляют 
+			span.fwb результаты внедрения 
+			| собственной системы обмена файлами? Свяжитесь с нами! 

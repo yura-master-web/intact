@@ -1,0 +1,102 @@
+// Clear the float on any element.
+clearfix()
+	&:after
+		display table
+		clear both
+		content ''
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+// Set margin on left & right
+margin-x($margin)
+	margin-right $margin
+	margin-left $margin
+
+// Set margin on top & bottom
+margin-y($margin)
+	margin-top $margin
+	margin-bottom $margin
+
+// Set pading on left & right
+padding-x($padding)
+	padding-right $padding
+	padding-left $padding
+
+// Set padding on top & bottom
+padding-y($padding)
+	padding-top $padding
+	padding-bottom $padding
+
+// Set one static retina image
+retinaBackground($image, $ext = 'png') {
+	background-image url('../images/' + $image + '.' + $ext)
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image url('../images/' + $image + '@2x.' + $ext)
+	}
+}
+
+font-face($font-name, $file-name, $font-name-space, $font-name-no-space, $weight = normal, $style = normal)
+	@font-face
+		font-family $font-name
+		src local($font-name-space), local($font-name-no-space),
+				url($file-name + '.woff2') format('woff2'),
+				url($file-name + '.woff') format('woff')
+		font-weight $weight
+		font-style $style
+		font-display swap
+
+
+// Переводит в rem
+// 60rem -> 60rem or '60rem' -> 60rem
+// 60px -> 3.3333rem or '60px' -> 3.3333rem
+px2rem($px)
+	// number
+	if typeof($px) == 'unit'
+		if unit($px) == 'rem'
+			$px
+		else
+			unit($px / $font-size-root, 'rem')
+	// string
+	else
+		if unit(convert(unquote($px))) == 'rem'
+			convert(unquote($px))
+		else
+			unit(convert(unquote($px)) / $font-size-root, 'rem')
+
+rem2px($rem)
+	if typeof($rem) == 'unit'
+		if unit($rem) == 'px'
+			$rem
+		else
+			round(unit($rem * $font-size-root, 'px'))
+	else
+		if unit(convert(unquote($rem))) == 'px'
+			convert(unquote($rem))
+		else
+			round(unit(convert(unquote($rem)) * $font-size-root, 'px'))
+
+// px2vw($name, $size)
+// 	$screenSize = breakpoint-min($next, $breakpoints) - 1px
+// 	$size * 100 / $screenSize
+
+svgSize($icon)
+	width $icon[0]
+	height $icon[1]
+
+.visuallyhidden
+	position absolute
+	margin -1px
+	padding 0
+	overflow hidden
+	clip rect(0 0 0 0)
+	width 1px
+	height 1px
+	border none

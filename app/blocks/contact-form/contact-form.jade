@@ -1,0 +1,43 @@
+mixin contact-form(mod, formName)
+	+b('form').contact-form(
+		class="#{mod ? mod : ''}"
+	).bdrs.justify-center.cl-form&attributes(attributes)
+
+		+b('label').form-input_input
+			+e('input').item.bdrs(
+				name="name"
+				placeholder="Ваше имя"
+				required
+			)
+
+		+b('label').form-input_input
+			+e('input').item.bdrs(
+				type="email"
+				name="email"
+				placeholder="Контактный email"
+				required
+			)
+
+		+b('label').form-input_input
+			+e('input').item.bdrs(
+				name="phone"
+				placeholder="Номер телефона"
+				required
+			)
+
+		+b('label').form-input_textarea
+			+e('textarea').item.bdrs(
+				name="message"
+				placeholder="Сообщение"
+				rows="3"
+			)
+
+		+e.form-btn
+			+e('button').btn-sub.button.btn-hover.bg-secondary-color.tdn.upcs.bdrs.js-btn-form-submit Оставить заявку
+
+			+b('label').form-agree.pos-rel
+				+e('input').check.visuallyhidden(type="checkbox" name="agree" required checked=true)
+				+e('span').btn
+				+e('a').txt.pos-rel.cl-form.tdn(data-remodal-target="modal-privacy-policy" href="javascript:;") Согласен с политикой конфиденциальности
+
+		input(type="hidden" value="#{formName}")

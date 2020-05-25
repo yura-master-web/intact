@@ -1,0 +1,55 @@
+extends /blocks/layout-default/layout-default
+include /blocks/icon/icon
+
+include /blocks/main-block/main-block
+include /blocks/problems/problems
+include /blocks/banner-leave-request/banner-leave-request
+include /blocks/reason/reason
+include /blocks/functions/functions
+include /blocks/stages/stages
+include /blocks/limitations/limitations
+include /blocks/trust-us/trust-us
+include /blocks/integrator/integrator
+include /blocks/contacts/contacts
+include /blocks/footer/footer
+include /blocks/modal/modal
+include /blocks/modal/modal-form
+include /blocks/modal/modal-privacy-policy
+include /blocks/contact-form/contact-form
+
+block head
+	- var pageTitle = 'OwnCloud - Корпоративная система обмена файлами';
+	- var pageDescription = 'Решение OwnCloud позволяет развернуть собственную корпоративную систему обмена файлами. Это частное облако - безопасное и конфиденциальное.';
+
+block content
+	.remodal-bg.main-wrapper.cl-text
+		+b.bg-mask
+		+main-block.js-main-block
+		.container
+			//- Проблемы хранения и обмена файлами
+			+problems#problems.block-indent
+		.container
+			//- Четыре причины иметь собственную систему обмена файлами
+			+reason#reason.block-indent
+		.container
+			//- Функции системы
+			+functions#functions.block-indent
+		.container
+			//- Этапы внедрения
+			+stages#cost.block-indent
+		.container
+			//- Ограничения и системные требования
+			+limitations#limitations.block-indent
+		.container
+			//- нам доверяют
+			+trust-us.block-indent
+		.container
+			//- INTACT. Правильный интегратор
+			+integrator#integrator.block-indent_min
+		.container
+			//- Контакты
+			+contacts#contacts.block-indent
+		+footer
+		+modal
+		+modal-form
+		+modal-privacy-policy

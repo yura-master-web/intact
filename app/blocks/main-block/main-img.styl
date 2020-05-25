@@ -1,0 +1,129 @@
+.main-img
+	position absolute
+	top -277px
+	right -390px
+	width 1759px
+	// width unit((1759 * 100 / 1919), 'vw')
+	pointer-events none
+	+media-breakpoint-down('lg')
+		top -233px
+		right -320px
+		width 1450px
+	+media-breakpoint-down('md')
+		top -203px
+		right -310px
+		width 1250px
+	+media-breakpoint-down('sm')
+		position relative
+		top -100px
+		right 0
+		left 0
+		width 100%
+		max-height 0
+	+media-breakpoint-down('xs')
+		top -50px
+
+	&__img
+		position relative
+		width 100%
+		max-width initial
+		+media-breakpoint-down('sm')
+			top -200px
+			left -30px
+			width 720px
+		+media-breakpoint-down('xs')
+			top -460px
+			left 20%
+			width 1000px
+			opacity .2
+			transform translateX(-50%)
+
+	&__elipse
+		position absolute
+		width 13px
+		height 9px
+		background-color #fff
+		border-radius 50%
+		box-shadow 0 0 17px 3px rgba(colors('white'), .6)
+		offset-rotate reverse
+		+media-breakpoint-down('lg')
+			display none
+		&:after
+			position absolute
+			top 3.3px
+			left 2px
+			display block
+			width 50px
+			height 2px
+			content ''
+			background-image linear-gradient(to right, rgba(colors('white', .6)), rgba(colors('white'), 0))
+		&_1
+			animation move-along 5s 0ms infinite normal linear // top - right
+			offset-path path('M 1277, 465 L 1772,179 z')
+			// offset-distance 50%
+		&_2
+			animation move-along-top-left 5s 0ms infinite normal linear // top - left
+			offset-path path('M 325, -50 L 1064,377 z')
+			// offset-distance 50%
+		&_3
+			animation move-along 6s 0ms infinite normal linear // bottom - right
+			offset-path path('M 1244,481 L 1759, 778 z')
+			// offset-distance 10%
+		&_4
+			animation move-along-bottom-left 2.5s 0ms infinite normal linear // bottom - left
+			offset-path path('M 499, 981 L 1057,657 z')
+			// offset-distance 50%
+
+
+@keyframes move-along
+	100%
+		offset-distance 100%
+
+@keyframes move-along-bottom-left
+	100%
+		offset-distance 50%
+
+@keyframes move-along-top-left
+	50%
+		offset-distance 50%
+	70%
+		offset-distance 50%
+	100%
+		offset-distance 100%
+
+@supports (-ms-ime-align:auto)
+	.main-img__elipse
+		&_1
+			top 286px
+			left 1572px
+			transform rotate(-29deg)
+		&_2
+			top 223px
+			left 800px
+			transform rotate(-150deg)
+		&_3
+			top 798px
+			left 800px
+			transform rotate(-30deg)
+		&_4
+			top 621px
+			left 1490px
+			transform rotate(-151deg)
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+	.main-img__elipse
+		&_1
+			top 286px
+			left 1572px
+			transform rotate(-29deg)
+		&_2
+			top 223px
+			left 800px
+			transform rotate(-150deg)
+		&_3
+			top 798px
+			left 800px
+			transform rotate(-30deg)
+		&_4
+			top 621px
+			left 1490px
+			transform rotate(-151deg)

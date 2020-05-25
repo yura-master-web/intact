@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.32" height="23.33" viewBox="0 0 17.32 23.33">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>arrow</title>
+  <path class="a" d="M16.66,15l-8,7-8-7m8,7V0"/>
+</svg>

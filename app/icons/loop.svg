@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+        stroke: #2947f2;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>loop</title>
+  <path class="a" d="M22,1C36.61,1,43,12.87,43,22c0,10-8.22,16.43-9.13,17.35m0-7.3L33,40.26l8.22-.91m-31-34.7C9.22,5.57,1,12,1,22c0,9.13,6.39,21,21,21M10.13,12,11,3.74l-8.22.91M21.5,19A3.5,3.5,0,1,0,25,22.5,3.5,3.5,0,0,0,21.5,19Z"/>
+</svg>

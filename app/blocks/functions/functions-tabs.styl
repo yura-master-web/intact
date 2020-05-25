@@ -1,0 +1,137 @@
+.functions-tabs
+	border 2px solid colors('border')
+	col()
+	size(12)
+
+	&__header
+		display flex
+
+	&__content
+		height 644px
+		border-radius 0 0 4px 4px
+		+media-breakpoint-down('lg')
+			height 550px
+		+media-breakpoint-down('md')
+			height 410px
+		+media-breakpoint-down('sm')
+			height 300px
+		+media-breakpoint-down('xs')
+			height 56vw
+
+.functions-tabs-item
+	display flex
+	min-width 128px
+	height 128px
+	cursor pointer
+	transition background-color $t-time, color $t-time, flex-basis .4s
+	flex 1 1 128px
+	align-items center
+	+media-breakpoint-down('md')
+		min-width 70px
+		height 100px
+		font-size px2rem(16px)
+	+media-breakpoint-down('sm')
+		font-size px2rem(14px)
+	+media-breakpoint-down('xs')
+		min-width inherit
+		height 40px
+	&.is-active
+		padding-right 163px
+		background-color colors('accent')
+		flex 1 1 100%
+		+media-breakpoint-down('lg')
+			padding-right 20px
+		+media-breakpoint-down('xs')
+			padding-right 0
+	&:first-child
+		border-radius 4px 0 0 0
+	&:last-child
+		border-radius 0 4px 0 0
+
+	&:hover
+		color colors('white')
+		background-color colors('accent')
+
+	&:nth-last-child(n+2)
+		border-right 2px solid colors('border')
+
+	&__wrap-icon
+		display flex
+		justify-content center
+		min-width 128px
+		+media-breakpoint-down('md')
+			min-width 70px
+		+media-breakpoint-down('sm')
+			min-width 70px
+		+media-breakpoint-down('xs')
+			min-width 100%
+
+	&__icon
+		transition stroke $t-time
+		fill none
+		stroke colors('accent')
+		stroke-miterlimit 10
+		stroke-width 2px
+
+		~/.is-active &
+		~/:hover &
+			stroke colors('white')
+
+		&_integ
+			svgSize(44px 48px)
+			+media-breakpoint-down('sm')
+				svgSize(22px 24px)
+		&_loop
+			svgSize(44px 44px)
+			+media-breakpoint-down('sm')
+				svgSize(22px 22px)
+		&_infin
+			svgSize(44.46px 43px)
+			+media-breakpoint-down('sm')
+				svgSize(22.23px 21.5px)
+		&_mob
+			svgSize(28px 48px)
+			+media-breakpoint-down('sm')
+				svgSize(14px 24px)
+		&_set
+			svgSize(44px 44px)
+			+media-breakpoint-down('sm')
+				svgSize(22px 22px)
+
+
+	&__txt
+		visibility hidden
+		opacity 0
+		transition opacity $t-time
+		+media-breakpoint-down('xs')
+			display none
+		~/.is-active &
+			visibility visible
+			color colors('white')
+			opacity 1
+			transition opacity $t-time linear $t-time
+
+
+.functions-content-item
+	position relative
+	padding 40px 35px
+	display none
+	height 100%
+	background-repeat no-repeat
+	background-position center center
+	background-origin content-box
+	background-size contain
+	+media-breakpoint-down('sm')
+		padding 20px 15px
+	+media-breakpoint-down('xs')
+		padding 15px
+	&_1
+		background-image url(../images/scr-n-1.png)
+	&_2
+		background-image url(../images/scr-n-2.png)
+	&_3
+		background-image url(../images/scr-n-3.png)
+	&_4
+		background-image url(../images/scr-n-4.png)
+	&_5
+		background-image url(../images/scr-n-5.png)

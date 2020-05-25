@@ -1,0 +1,64 @@
+.banner-leave-request
+	padding 68px 59px
+	font-size px2rem(24px)
+	line-height px2rem(40px)
+	background-image url(../images/b-leave-request.png)
+	background-repeat no-repeat
+	background-position 218px 0
+
+	display flex
+	justify-content space-between
+	flex-wrap wrap
+	align-items center
+	col()
+	size(12)
+	+media-breakpoint-down('lg')
+		padding 50px
+		font-size px2rem(22px)
+		line-height px2rem(36px)
+	+media-breakpoint-down('md')
+		padding 30px
+		justify-content center
+	+media-breakpoint-down('sm')
+		padding 20px
+	+media-breakpoint-down('xs')
+		font-size px2rem(18px)
+		line-height px2rem(26px)
+
+	&__desc
+		flex 0 1 500px
+		+media-breakpoint-down('lg')
+			flex 0 1 435px
+		+media-breakpoint-down('md')
+			text-align center
+		~/_stages &
+			flex 0 1 600px
+			+media-breakpoint-down('lg')
+				flex 0 1 500px
+	&__button
+		max-width 359px
+		font-size px2rem(18px)
+		flex 0 1 400px
+		+media-breakpoint-down('lg')
+			max-width 300px
+			flex 0 1 359px
+		+media-breakpoint-down('md')
+			margin-top 20px
+		+media-breakpoint-down('xs')
+			height 40px
+			font-size px2rem(16px)
+			&.btn-hover
+				width 100%
+				max-width 100%
+				flex 1 1 auto
+
+	&_problems
+		margin-top 140px
+		+media-breakpoint-down('lg')
+			margin-top 110px
+		+media-breakpoint-down('md')
+			margin-top 80px
+		+media-breakpoint-down('sm')
+			margin-top 30px
+		+media-breakpoint-down('xs')
+			margin-top 20px

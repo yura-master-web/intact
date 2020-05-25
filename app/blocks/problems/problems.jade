@@ -1,0 +1,18 @@
+mixin problems()
+	+b.problems.row.justify-center&attributes(attributes)
+		+e('h2').title.block-title_problems Проблемы хранения и обмена файлами
+
+	.row
+		+b.problem-card_folder.bdrs.pos-rel
+			+e('h3').title.sub-title Контроль
+			+e('p').desc Неконтролируемое хранение сотрудниками конвенциальных данных в публичном «облаке».
+		+b.problem-card_big.bdrs.pos-rel
+			+e('h3').title.sub-title Большой объем
+			+e('p').desc Невозможность передать большой объем файлов по почте.
+		+b.problem-card_sec.bdrs.pos-rel
+			+e('h3').title.sub-title Конфиденциальность
+			+e('p').desc Передача конфиденциальных данных контрагентов через публичное «облако».
+
+		+banner-leave-request('_problems')
+			span.fwb Решение сложностей 
+			| — собственная корпоративная система обмена файлами.
