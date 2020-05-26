@@ -8,6 +8,33 @@ $.extend($.validator.messages, {
 
 let btnSubmit = null;
 
+const showGoodRespose = el => {
+	const $modal = $(el);
+	const $blockGood = $modal.find('.js-modal-good');
+	const $blockFail = $modal.find('.js-modal-fail');
+	$blockGood.show();
+	$blockFail.hide();
+
+	// открываем модальное окно
+	const instModal = $(el).remodal();
+	instModal.open();
+	btnSubmit.removeAttr('disabled');
+};
+const showBadResponse = el => {
+	const $modal = $(el);
+	const $blockGood = $modal.find('.js-modal-good');
+	const $blockFail = $modal.find('.js-modal-fail');
+	$blockGood.hide();
+	$blockFail.show();
+
+	// открываем модальное окно
+	const instModal = $(el).remodal();
+	instModal.open();
+	btnSubmit.removeAttr('disabled');
+};
+
+let idn = null;
+
 const settingsValidation = {
 	rules: {
 		phone: {
@@ -21,39 +48,34 @@ const settingsValidation = {
 		btnSubmit = $(this.submitButton);
 		btnSubmit.attr('disabled', 'disabled');
 
-		$.post('index.php', $(this.currentForm).serialize())
-			.done(() => {
-				$('[data-remodal-id="modal"]').each((i, el) => {
-					// покажем положительный результат
-					const $modal = $(el);
-					const $blockGood = $modal.find('.js-modal-good');
-					const $blockFail = $modal.find('.js-modal-fail');
-					$blockGood.show();
-					$blockFail.hide();
+		if (!idn) {
+			$.post('send.php', $(this.currentForm).serialize())
+				.done(res => {
+					console.log(res);
+					$('[data-remodal-id="modal"]').each((i, el) => {
+						const {status, message, id} = JSON.parse(
+							res.statusText
+						);
+						if (status === 'ok') {
+							console.log(message);
+							idn = id;
+							// покажем положительный результат
+							showGoodRespose(el);
+						} else {
+							showBadResponse(el);
+						}
+					});
+				})
+				.fail(res => {
+					console.warn('fail');
+					console.log(res);
 
-					// открываем модальное окно
-					const instModal = $(el).remodal();
-					instModal.open();
-					btnSubmit.removeAttr('disabled');
+					$('[data-remodal-id="modal"]').each((i, el) => {
+						// покажем провал запроса
+						showBadResponse(el);
+					});
 				});
-			})
-			.fail(() => {
-				console.warn('fail');
-
-				$('[data-remodal-id="modal"]').each((i, el) => {
-					// покажем провал запроса
-					const $modal = $(el);
-					const $blockGood = $modal.find('.js-modal-good');
-					const $blockFail = $modal.find('.js-modal-fail');
-					$blockGood.hide();
-					$blockFail.show();
-
-					// открываем модальное окно
-					const instModal = $(el).remodal();
-					instModal.open();
-					btnSubmit.removeAttr('disabled');
-				});
-			});
+		}
 	}
 };
 
