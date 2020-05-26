@@ -24,6 +24,8 @@ const showBadResponse = el => {
 	const $modal = $(el);
 	const $blockGood = $modal.find('.js-modal-good');
 	const $blockFail = $modal.find('.js-modal-fail');
+	// const $txtError = $modal.find('.js-bad-text');
+	// $txtError.html(error);
 	$blockGood.hide();
 	$blockFail.show();
 
@@ -32,8 +34,6 @@ const showBadResponse = el => {
 	instModal.open();
 	btnSubmit.removeAttr('disabled');
 };
-
-let idn = null;
 
 const settingsValidation = {
 	rules: {
@@ -48,34 +48,24 @@ const settingsValidation = {
 		btnSubmit = $(this.submitButton);
 		btnSubmit.attr('disabled', 'disabled');
 
-		if (!idn) {
-			$.post('send.php', $(this.currentForm).serialize())
-				.done(res => {
-					console.log(res);
-					$('[data-remodal-id="modal"]').each((i, el) => {
-						const {status, message, id} = JSON.parse(
-							res.statusText
-						);
-						if (status === 'ok') {
-							console.log(message);
-							idn = id;
-							// покажем положительный результат
-							showGoodRespose(el);
-						} else {
-							showBadResponse(el);
-						}
-					});
-				})
-				.fail(res => {
-					console.warn('fail');
-					console.log(res);
-
-					$('[data-remodal-id="modal"]').each((i, el) => {
-						// покажем провал запроса
+		$.post('/send.php', $(this.currentForm).serialize())
+			.done(res => {
+				$('[data-remodal-id="modal"]').each((i, el) => {
+					const {status} = JSON.parse(res);
+					if (status === 'ok') {
+						// покажем положительный результат
+						showGoodRespose(el);
+					} else {
 						showBadResponse(el);
-					});
+					}
 				});
-		}
+			})
+			.fail(() => {
+				$('[data-remodal-id="modal"]').each((i, el) => {
+					// покажем провал запроса
+					showBadResponse(el);
+				});
+			});
 	}
 };
 

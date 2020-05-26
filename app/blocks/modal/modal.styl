@@ -46,23 +46,41 @@
 		max-height 500px
 		align-items center
 
-	&__fail
+	&__good
 		display none
+
+	&__fail
+		// display none
 		& ^[0]__title
 			color colors('error')
 
 	&__title
-		margin-bottom 50px
+		margin-bottom 27px
 		font-size px2rem(50px)
 		line-height px2rem(70px)
+		& a
+			color currentColor
 		+media-breakpoint-down('sm')
-			margin-bottom 40px
+			margin-bottom 0
 			font-size px2rem(28px)
 			line-height px2rem(38px)
 		+media-breakpoint-down('xs')
-			margin-bottom 60px
+			margin 0 -10px
 			font-size px2rem(24px)
 			line-height px2rem(30px)
+		&_bad
+			font-size px2rem(40px)
+			line-height px2rem(52px)
+			+media-breakpoint-down('md')
+				font-size px2rem(34px)
+				line-height px2rem(46px)
+			+media-breakpoint-down('sm')
+				font-size px2rem(24px)
+				line-height px2rem(30px)
+			+media-breakpoint-down('xs')
+				font-size px2rem(20px)
+				line-height px2rem(28px)
+
 	&__sub-title
 		position absolute
 		right 0
