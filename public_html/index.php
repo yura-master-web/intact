@@ -444,12 +444,13 @@ $APPLICATION->SetTitle('OwnCloud - Корпоративная система о�
 					<div class="modal-form bg-accent cl-white bdrs ovh pos-rel js-modal-form">
 						<div data-remodal-action="close" class="btn-close btn-close_good"></div>
 						<div class="modal-form__good js-modal-good">
-							<p class="modal-form__title fwb">Спасибо за заявку</p>
-							<p class="modal-form__sub-title">Подзаголовок, если потребуется</p>
+							<p class="modal-form__title fwb">Спасибо! Ваша заявка успешно принята.</p>
 						</div>
 						<div class="modal-form__fail js-modal-fail">
-							<p class="modal-form__title fwb">Что то пошло не так</p>
-							<p class="modal-form__sub-title">Подзаголовок, если потребуется</p>
+							<p class="modal-form__title modal-form__title_bad fwb">На сервере возникла ошибка, заявка не
+								отправлена. Пожалуйста, заполните форму повторно либо позвоните для консультации на
+								номер
+								<a href="tel:+74959894049">74959894049</a></p>
 						</div>
 						<div class="modal-form__bg"></div>
 					</div>

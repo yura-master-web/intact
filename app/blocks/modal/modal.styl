@@ -47,10 +47,10 @@
 		align-items center
 
 	&__good
-		display none
+		// display none
 
 	&__fail
-		// display none
+		display none
 		& ^[0]__title
 			color colors('error')
 
@@ -60,6 +60,9 @@
 		line-height px2rem(70px)
 		& a
 			color currentColor
+			transition color .27s
+			&:hover
+				color colors('white')
 		+media-breakpoint-down('sm')
 			margin-bottom 0
 			font-size px2rem(28px)
