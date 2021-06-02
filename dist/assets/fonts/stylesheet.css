@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Asket Extended';
+    src: local('Asket Extended Light'), local('AsketExtended-Light'),
+        url('subset-AsketExtended-Light.woff2') format('woff2'),
+        url('subset-AsketExtended-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
